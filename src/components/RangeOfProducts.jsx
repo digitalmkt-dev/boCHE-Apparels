@@ -9,7 +9,7 @@ const categories = [
   {
     id: "01",
     name: "Men's Wear",
-    image: "/images/range-mens.png",
+    image: "/images/range-mens.webp",
     alt: "boCHE Apparels Men's Wear Garment Manufacturing Range",
     link: "/catalog?category=mens",
     objectPosition: "center center",
@@ -17,7 +17,7 @@ const categories = [
   {
     id: "02",
     name: "Women's Wear",
-    image: "/images/range-womens.png",
+    image: "/images/range-womens.webp",
     alt: "boCHE Apparels Women's Wear Garment Manufacturing Range",
     link: "/catalog?category=womens",
     objectPosition: "center center",
@@ -25,7 +25,7 @@ const categories = [
   {
     id: "03",
     name: "Kids Wear",
-    image: "/images/range-kids.png",
+    image: "/images/range-kids.webp",
     alt: "boCHE Apparels Kids Wear Garment Manufacturing Range",
     link: "/catalog?category=kids",
     objectPosition: "center center",

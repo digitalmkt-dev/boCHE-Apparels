@@ -383,7 +383,7 @@ export default function AboutPage() {
     {
       name: "boCHE 1000 Acre",
       desc: "A large-scale resort, entertainment and tourism destination.",
-      logo: "/group_logos/boche 1000 acre.png",
+      logo: "/group_logos/boche 1000 acre.webp",
     },
     {
       name: "boCHE Toddy Pub",
@@ -433,7 +433,7 @@ export default function AboutPage() {
     {
       name: "boCHE Apparels",
       desc: "Garment and apparel manufacturing activities within the group.",
-      logo: "/group_logos/bohce apparles.png",
+      logo: "/group_logos/bohce apparles.webp",
     },
     {
       name: "Ciinfos",
@@ -457,7 +457,7 @@ export default function AboutPage() {
         title="About boCHE Apparels"
         subtitle="Apparel Manufacturing Built on Quality, Consistency & Trust"
         breadcrumb="About Us"
-        bgImage="/images/about-title.jpeg"
+        bgImage="/images/about-title.webp"
       />
 
       {/* Main Container */}
@@ -1235,7 +1235,7 @@ export default function AboutPage() {
                 className="relative w-full max-w-sm aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20 group cursor-pointer hover:-translate-y-1 transition-transform duration-300 ease-out"
               >
                 <Image
-                  src="/images/boche 1.jpg"
+                  src="/images/boche 1.webp"
                   alt="Dr. Boby Chemmanur (boCHE) Chairman"
                   fill
                   className="object-cover object-top group-hover:scale-105 transition-transform duration-300 ease-out"

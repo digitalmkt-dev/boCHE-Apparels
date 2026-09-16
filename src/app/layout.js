@@ -18,9 +18,9 @@ export const metadata = {
   ],
   authors: [{ name: "boCHE Apparels" }],
   icons: {
-    icon: "/favicon.jpeg",
-    shortcut: "/favicon.jpeg",
-    apple: "/favicon.jpeg",
+    icon: "/favicon.webp",
+    shortcut: "/favicon.webp",
+    apple: "/favicon.webp",
   },
   openGraph: {
     title: "boCHE Apparels | Industrial Craft Garment Unit",
@@ -40,9 +40,9 @@ export default function RootLayout({ children }) {
       className="h-full antialiased scroll-smooth"
     >
       <head>
-        <link rel="icon" href="/favicon.jpeg" type="image/jpeg" />
-        <link rel="shortcut icon" href="/favicon.jpeg" type="image/jpeg" />
-        <link rel="apple-touch-icon" href="/favicon.jpeg" />
+        <link rel="icon" href="/favicon.webp" type="image/jpeg" />
+        <link rel="shortcut icon" href="/favicon.webp" type="image/jpeg" />
+        <link rel="apple-touch-icon" href="/favicon.webp" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link

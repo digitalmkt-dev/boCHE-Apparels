@@ -25,7 +25,7 @@ export default function BlogPage() {
       date: "August 18, 2026",
       author: "Technical Merchandising Team",
       excerpt: "A deep dive into GOTS organic cotton blends, recycled polyester GSM metrics, and low-impact dyeing techniques that reduce carbon footprint.",
-      image: "/images/fabric-sourcing.png",
+      image: "/images/fabric-sourcing.webp",
       readTime: "5 min read",
     },
     {
@@ -35,7 +35,7 @@ export default function BlogPage() {
       date: "July 24, 2026",
       author: "CAD CAD Team",
       excerpt: "How 3D digital sampling reduces sample turnaround times from 3 weeks to 48 hours while eliminating fabric waste.",
-      image: "/images/hero-factory.png",
+      image: "/images/hero-factory.webp",
       readTime: "4 min read",
     },
     {
@@ -45,7 +45,7 @@ export default function BlogPage() {
       date: "June 12, 2026",
       author: "Production Merchandiser",
       excerpt: "Key strategies for scaling trial batches starting at 300 Pcs into full-scale production without sacrificing quality control.",
-      image: "/images/activewear.png",
+      image: "/images/activewear.webp",
       readTime: "6 min read",
     },
   ];
@@ -56,7 +56,7 @@ export default function BlogPage() {
         title="Apparel Engineering Blog"
         subtitle="Technical guides, textile innovations, supply chain trends, and manufacturing insights from our engineering team in Tirupur."
         breadcrumb="Blog"
-        bgImage="/images/hero-factory.png"
+        bgImage="/images/hero-factory.webp"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 pt-12">

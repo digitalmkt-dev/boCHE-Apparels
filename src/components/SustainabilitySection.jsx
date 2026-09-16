@@ -13,7 +13,7 @@ export default function SustainabilitySection() {
             <div className="relative h-[420px] rounded-3xl overflow-hidden border border-[#E5E5E2] shadow-xl p-2 bg-[#FFFFFF]">
               <div className="relative h-full w-full rounded-2xl overflow-hidden">
                 <Image
-                  src="/images/fabric-sourcing.png"
+                  src="/images/fabric-sourcing.webp"
                   alt="boCHE Apparels Eco Friendly Fabrics"
                   fill
                   className="object-cover"

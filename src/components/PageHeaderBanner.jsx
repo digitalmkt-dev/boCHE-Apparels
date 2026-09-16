@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 
-export default function PageHeaderBanner({ title, subtitle, breadcrumb, bgImage = "/images/hero-factory.png" }) {
+export default function PageHeaderBanner({ title, subtitle, breadcrumb, bgImage = "/images/hero-factory.webp" }) {
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {

@@ -63,7 +63,7 @@ export default function Header({ onOpenQuoteModal }) {
               {/* Logo */}
               <Link href="/" className="flex items-center gap-3 group">
                 <Image
-                  src="/logo/bocheapprels.png"
+                  src="/logo/bocheapprels.webp"
                   alt="boCHE Apparels Logo"
                   width={220}
                   height={60}
@@ -130,7 +130,7 @@ export default function Header({ onOpenQuoteModal }) {
             <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
               <Link href="/" className="flex items-center gap-3 group">
                 <Image
-                  src="/logo/bocheapprels.png"
+                  src="/logo/bocheapprels.webp"
                   alt="boCHE Apparels Logo"
                   width={200}
                   height={54}
@@ -200,7 +200,7 @@ export default function Header({ onOpenQuoteModal }) {
             {/* Brand Logo */}
             <Link href="/" className="flex items-center gap-3 group">
               <Image
-                src="/logo/bocheapprels2.png"
+                src="/logo/bocheapprels2.webp"
                 alt="boCHE Apparels Logo"
                 width={200}
                 height={54}
@@ -277,7 +277,7 @@ export default function Header({ onOpenQuoteModal }) {
         <div className="p-6 border-b border-[#E5E5E2] flex items-center justify-between bg-[#F9F9F9]">
           <Link href="/" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2">
             <Image
-              src={isHomePage ? "/logo/bocheapprels.png" : "/logo/bocheapprels2.png"}
+              src={isHomePage ? "/logo/bocheapprels.webp" : "/logo/bocheapprels2.webp"}
               alt="boCHE Apparels Logo"
               width={180}
               height={50}

@@ -236,7 +236,7 @@ export default function AboutUsSection({ onOpenQuoteModal }) {
                 className="relative z-10 w-36 sm:w-48 md:w-52 lg:w-[190px] xl:w-[230px] h-[240px] sm:h-[300px] md:h-[320px] lg:h-[290px] xl:h-[340px] rounded-[24px] sm:rounded-[28px] overflow-hidden shadow-xl border-4 border-white shrink-0 -mr-8 sm:-mr-10 lg:-mr-10 xl:-mr-12 mb-4 sm:mb-6"
               >
                 <Image
-                  src="/images/about-artisan.png"
+                  src="/images/about-artisan.webp"
                   alt="Precision Artisan Garment Quality Control"
                   fill
                   className="object-cover"
@@ -253,7 +253,7 @@ export default function AboutUsSection({ onOpenQuoteModal }) {
                 className="relative z-0 w-48 sm:w-68 md:w-72 lg:w-[270px] xl:w-[320px] h-[330px] sm:h-[420px] md:h-[440px] lg:h-[420px] xl:h-[490px] rounded-[28px] sm:rounded-[32px] overflow-hidden shadow-2xl border-4 border-white shrink-0"
               >
                 <Image
-                  src="/images/about-inspectors.png"
+                  src="/images/about-inspectors.webp"
                   alt="Texora Apparel Quality Inspection"
                   fill
                   className="object-cover"

@@ -24,7 +24,7 @@ export default function SustainabilityPage() {
         title="CSR & Sustainability"
         subtitle="Protecting our planet and advancing worker welfare through clean energy, closed-loop water treatment, and zero-waste garment production."
         breadcrumb="CSR"
-        bgImage="/images/fabric-sourcing.png"
+        bgImage="/images/fabric-sourcing.webp"
       />
 
       <div className="pt-8">
@@ -72,7 +72,7 @@ export default function SustainabilityPage() {
           <div className="lg:col-span-5 relative h-72 sm:h-80 rounded-2xl overflow-hidden border border-[#E5E5E2] p-2 bg-[#F9F9F9]">
             <div className="relative h-full w-full rounded-xl overflow-hidden">
               <Image
-                src="/images/activewear.png"
+                src="/images/activewear.webp"
                 alt="Ethical Apparel Production"
                 fill
                 className="object-cover"

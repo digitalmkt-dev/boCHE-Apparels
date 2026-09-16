@@ -67,7 +67,7 @@ export default function QualityPolicySection() {
                 className="relative w-full h-[140%] -top-[20%]"
               >
                 <Image
-                  src="/images/quality-inspection.png"
+                  src="/images/quality-inspection.webp"
                   alt="boCHE Apparels Garment Quality Inspection and Standards Policy"
                   fill
                   priority

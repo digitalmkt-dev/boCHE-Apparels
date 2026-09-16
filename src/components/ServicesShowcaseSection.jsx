@@ -12,7 +12,7 @@ export default function ServicesShowcaseSection() {
     {
       id: "knitting",
       title: "Knitting",
-      image: "/images/service-knitting.png",
+      image: "/images/service-knitting.webp",
       tag: "Associated Unit",
     },
     {
@@ -30,7 +30,7 @@ export default function ServicesShowcaseSection() {
     {
       id: "embroidery",
       title: "Embroidery",
-      image: "/images/service-embroidery.png",
+      image: "/images/service-embroidery.webp",
       tag: "Supplier Facility",
     },
     {

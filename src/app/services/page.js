@@ -7,10 +7,10 @@ import PageHeaderBanner from "@/components/PageHeaderBanner";
 import { Check } from "lucide-react";
 
 const facilityImages = {
-  knitting: "/images/service-knitting.png",
+  knitting: "/images/service-knitting.webp",
   "dyeing-fabric-processing": "/images/dying.webp",
   printing: "/images/printing .webp",
-  embroidery: "/images/service-embroidery.png",
+  embroidery: "/images/service-embroidery.webp",
   "sewing-production": "/images/sewing and production .webp",
   sampling: "/images/sampling.webp",
   merchandising: "/images/merchandising.webp",
@@ -33,7 +33,7 @@ export default function ServicesPage() {
         {/* Responsive 3-Card Grid Setup */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
           {SERVICES.map((service, index) => {
-            const imgSrc = facilityImages[service.id] || "/images/service-knitting.png";
+            const imgSrc = facilityImages[service.id] || "/images/service-knitting.webp";
 
             // Badge text matching mockup
             const badgeText = service.associatedNote

@@ -86,7 +86,7 @@ export async function POST(request) {
     });
 
     // Logo Attachment Setup
-    const logoPath = path.join(process.cwd(), "public", "logo", "bocheapprels.png");
+    const logoPath = path.join(process.cwd(), "public", "logo", "bocheapprels.webp");
     const groupLogoPath = path.join(process.cwd(), "public", "logo", "group-logo.webp");
     const hasLogo = fs.existsSync(logoPath);
     const hasGroupLogo = fs.existsSync(groupLogoPath);
@@ -371,7 +371,7 @@ export async function POST(request) {
     const attachments = [];
     if (hasLogo) {
       attachments.push({
-        filename: "bocheapprels.png",
+        filename: "bocheapprels.webp",
         path: logoPath,
         cid: "bochelogo",
       });

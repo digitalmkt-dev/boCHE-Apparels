@@ -73,7 +73,7 @@ export default function Footer() {
               "
             >
               <Image
-                src="/logo/bocheapprels2.png"
+                src="/logo/bocheapprels2.webp"
                 alt="boCHE Apparels Logo"
                 width={140}
                 height={42}
