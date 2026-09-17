@@ -75,10 +75,10 @@ export default function Footer() {
               <Image
                 src="/logo/bocheapprels2.webp"
                 alt="boCHE Apparels Logo"
-                width={140}
-                height={42}
+                width={180}
+                height={54}
                 unoptimized
-                className="h-9 sm:h-10 md:h-11 lg:h-12 w-auto object-contain"
+                className="h-14 sm:h-14 md:h-12 lg:h-12 w-auto object-contain"
               />
 
               <span
@@ -506,9 +506,9 @@ export default function Footer() {
             <Image
               src="/logo/group-logo.webp"
               alt="Boby Chemmanur International Group Emblem"
-              width={100}
-              height={100}
-              className="mt-3 h-16 sm:h-20 md:h-22 lg:h-24 w-auto object-contain brightness-110 group-hover:scale-105 transition-transform duration-300"
+              width={140}
+              height={140}
+              className="mt-3 h-24 sm:h-24 md:h-22 lg:h-24 w-auto object-contain brightness-110 group-hover:scale-105 transition-transform duration-300"
             />
 
             <span

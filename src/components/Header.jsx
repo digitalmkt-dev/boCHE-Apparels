@@ -68,7 +68,7 @@ export default function Header({ onOpenQuoteModal }) {
                   width={220}
                   height={60}
                   unoptimized
-                  className="h-12 sm:h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                  className="h-14 sm:h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
                   priority
                 />
               </Link>
@@ -135,7 +135,7 @@ export default function Header({ onOpenQuoteModal }) {
                   width={200}
                   height={54}
                   unoptimized
-                  className="h-11 sm:h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                  className="h-13 sm:h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
                   priority
                 />
               </Link>
@@ -205,7 +205,7 @@ export default function Header({ onOpenQuoteModal }) {
                 width={200}
                 height={54}
                 unoptimized
-                className="h-11 sm:h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                className="h-13 sm:h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
                 priority
               />
             </Link>
@@ -282,7 +282,7 @@ export default function Header({ onOpenQuoteModal }) {
               width={180}
               height={50}
               unoptimized
-              className="h-10 sm:h-11 w-auto object-contain"
+              className="h-13 sm:h-11 w-auto object-contain"
             />
           </Link>
 
