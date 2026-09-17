@@ -150,10 +150,10 @@ export default function FloatingActions() {
         transition={{ duration: 0.3 }}
         onClick={() => setIsMenuOpen((prev) => !prev)}
         aria-label="Contact options"
-        className={`pointer-events-auto group relative flex items-center gap-2.5 px-4 py-3 rounded-full border shadow-xl transition-all duration-300 cursor-pointer active:scale-95 border-none ${
+        className={`pointer-events-auto group relative flex items-center gap-2.5 px-4 py-3 rounded-full border shadow-xl transition-all duration-300 cursor-pointer active:scale-95 ${
           isMenuOpen
-            ? "bg-[#FBE87E] text-[#1A1A1A] border-[#FBE87E]"
-            : "bg-[#1A1A1A] text-white border-white/20 hover:border-[#FBE87E] hover:bg-[#222222]"
+            ? "bg-[#FBE87E] text-[#1A1A1A] border-[#1A1A1A]/30"
+            : "bg-[#1A1A1A] text-white border-white/40 hover:border-[#FBE87E] hover:bg-[#222222]"
         }`}
       >
         <div className="w-7 h-7 rounded-full bg-[#25D366]/20 flex items-center justify-center shrink-0">
