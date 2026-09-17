@@ -34,7 +34,7 @@ export default function StatsCounter() {
     },
     {
       label: "EXPERIENCE",
-      value: "6 Years",
+      value: "6+ Years",
       iconSrc: "/icons/experience.webp",
       iconAlt: "Experience",
       desc: "Apparel manufacturing expertise",

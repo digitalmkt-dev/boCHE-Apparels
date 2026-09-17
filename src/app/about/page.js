@@ -133,7 +133,7 @@ export default function AboutPage() {
     },
     {
       label: "EXPERIENCE",
-      value: "6 Years",
+      value: "6+ Years",
       iconSrc: "/icons/experience.webp",
       iconAlt: "Experience",
       desc: "Apparel manufacturing expertise",
