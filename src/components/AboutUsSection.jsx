@@ -130,11 +130,6 @@ export default function AboutUsSection({ onOpenQuoteModal }) {
               ))}
             </motion.h2>
 
-            {/* Mobile Image / Logo Card (Shown below heading on mobile < lg) */}
-            <div className="block lg:hidden w-full py-4">
-              <ImageCardLayout GENTLE_LANDING_EASE={GENTLE_LANDING_EASE} />
-            </div>
-
             {/* Subtext Paragraph */}
             <motion.p
               initial={{ opacity: 0, y: 15 }}
@@ -227,9 +222,55 @@ export default function AboutUsSection({ onOpenQuoteModal }) {
 
           </div>
 
-          {/* Right Column: Overlapping Images Layout (Desktop only >= lg) */}
-          <div className="hidden lg:flex lg:col-span-6 relative items-center justify-end pt-8 lg:pt-0 w-full">
-            <ImageCardLayout GENTLE_LANDING_EASE={GENTLE_LANDING_EASE} />
+          {/* Right Column: Overlapping Images Layout (Centered on Mobile, Scaled for Tablet & Desktop) */}
+          <div className="lg:col-span-6 relative flex items-center justify-center lg:justify-end pt-8 lg:pt-0 w-full">
+
+            <div className="relative flex items-end justify-center lg:justify-end mx-auto lg:mx-0 px-2 sm:px-6 lg:px-0 lg:pr-8 xl:pr-12">
+
+              {/* Overlapping Left Image (Artisan/Worker) */}
+              <motion.div
+                initial={{ opacity: 0, y: 35, filter: "blur(6px)" }}
+                whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.35, ease: GENTLE_LANDING_EASE, delay: 0.65 }}
+                className="relative z-10 w-36 sm:w-48 md:w-52 lg:w-[190px] xl:w-[230px] h-[240px] sm:h-[300px] md:h-[320px] lg:h-[290px] xl:h-[340px] rounded-[24px] sm:rounded-[28px] overflow-hidden shadow-xl border-4 border-white shrink-0 -mr-8 sm:-mr-10 lg:-mr-10 xl:-mr-12 mb-4 sm:mb-6"
+              >
+                <Image
+                  src="/images/about-artisan.webp"
+                  alt="Precision Artisan Garment Quality Control"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 144px, (max-width: 1280px) 190px, 230px"
+                />
+              </motion.div>
+
+              {/* Main Tall Right Image (Inspectors & Fabric) */}
+              <motion.div
+                initial={{ opacity: 0, y: 35, filter: "blur(6px)" }}
+                whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.35, ease: GENTLE_LANDING_EASE, delay: 0.2 }}
+                className="relative z-0 w-48 sm:w-68 md:w-72 lg:w-[270px] xl:w-[320px] h-[330px] sm:h-[420px] md:h-[440px] lg:h-[420px] xl:h-[490px] rounded-[28px] sm:rounded-[32px] overflow-hidden shadow-2xl border-4 border-white shrink-0"
+              >
+                <Image
+                  src="/images/about-inspectors.webp"
+                  alt="Texora Apparel Quality Inspection"
+                  fill
+                  className="object-cover"
+                  priority
+                  sizes="(max-width: 768px) 192px, (max-width: 1280px) 270px, 320px"
+                />
+              </motion.div>
+
+              {/* Vertical Side Label */}
+              <div className="absolute -right-8 sm:-right-10 top-1/2 -translate-y-1/2 hidden sm:block">
+                <p className="text-[11px] font-headline font-black tracking-[0.25em] text-[#1A1A1A]/40 transform rotate-90 origin-center whitespace-nowrap">
+                  <span className="lowercase">bo</span>CHE APPARELS
+                </p>
+              </div>
+
+            </div>
+
           </div>
 
         </div>
@@ -237,53 +278,3 @@ export default function AboutUsSection({ onOpenQuoteModal }) {
     </section>
   );
 }
-
-// Reusable Image/Logo Card Component
-function ImageCardLayout({ GENTLE_LANDING_EASE }) {
-  return (
-    <div className="relative flex items-end justify-center lg:justify-end mx-auto lg:mx-0 px-2 sm:px-6 lg:px-0 lg:pr-8 xl:pr-12">
-      {/* Overlapping Left Image (Artisan/Worker) */}
-      <motion.div
-        initial={{ opacity: 0, y: 35, filter: "blur(6px)" }}
-        whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-        viewport={{ once: true }}
-        transition={{ duration: 1.35, ease: GENTLE_LANDING_EASE, delay: 0.65 }}
-        className="relative z-10 w-36 sm:w-48 md:w-52 lg:w-[190px] xl:w-[230px] h-[240px] sm:h-[300px] md:h-[320px] lg:h-[290px] xl:h-[340px] rounded-[24px] sm:rounded-[28px] overflow-hidden shadow-xl border-4 border-white shrink-0 -mr-8 sm:-mr-10 lg:-mr-10 xl:-mr-12 mb-4 sm:mb-6"
-      >
-        <Image
-          src="/images/about-artisan.webp"
-          alt="Precision Artisan Garment Quality Control"
-          fill
-          className="object-cover"
-          sizes="(max-width: 768px) 144px, (max-width: 1280px) 190px, 230px"
-        />
-      </motion.div>
-
-      {/* Main Tall Right Image (Inspectors & Fabric) */}
-      <motion.div
-        initial={{ opacity: 0, y: 35, filter: "blur(6px)" }}
-        whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-        viewport={{ once: true }}
-        transition={{ duration: 1.35, ease: GENTLE_LANDING_EASE, delay: 0.2 }}
-        className="relative z-0 w-48 sm:w-68 md:w-72 lg:w-[270px] xl:w-[320px] h-[330px] sm:h-[420px] md:h-[440px] lg:h-[420px] xl:h-[490px] rounded-[28px] sm:rounded-[32px] overflow-hidden shadow-2xl border-4 border-white shrink-0"
-      >
-        <Image
-          src="/images/about-inspectors.webp"
-          alt="Texora Apparel Quality Inspection"
-          fill
-          className="object-cover"
-          priority
-          sizes="(max-width: 768px) 192px, (max-width: 1280px) 270px, 320px"
-        />
-      </motion.div>
-
-      {/* Vertical Side Label */}
-      <div className="absolute -right-8 sm:-right-10 top-1/2 -translate-y-1/2 hidden sm:block">
-        <p className="text-[11px] font-headline font-black tracking-[0.25em] text-[#1A1A1A]/40 transform rotate-90 origin-center whitespace-nowrap">
-          <span className="lowercase">bo</span>CHE APPARELS
-        </p>
-      </div>
-    </div>
-  );
-}
-

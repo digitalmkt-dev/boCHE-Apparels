@@ -963,6 +963,11 @@ export default function AboutPage() {
                 Part of a Legacy — Boby Chemmanur International Group
               </h2>
 
+              {/* Mobile Group Logo Card (Shown right below heading on mobile < lg) */}
+              <div className="block lg:hidden my-6">
+                <GroupLogoCard GENTLE_EASE={GENTLE_EASE} />
+              </div>
+
               <p className="text-base font-body text-[#555555] leading-relaxed">
                 Founded as a small jewellery shop in <strong className="text-[#1A1A1A]">1863</strong>, the group has expanded and evolved over the years. Today, under the leadership of <strong className="text-[#1A1A1A]">boCHE</strong>, the fourth-generation heir, it stands as a globally renowned brand. The group now operates a network of <strong className="text-[#1A1A1A]">56 jewellery outlets across India, the USA, and the GCC</strong>.
               </p>
@@ -980,52 +985,10 @@ export default function AboutPage() {
               </p>
             </motion.div>
 
-            {/* Prominent Large Group Logo Display */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.9, ease: GENTLE_EASE }}
-              className="lg:col-span-5 flex items-center justify-center cursor-pointer hover:-translate-y-1 transition-transform duration-300 ease-out"
-            >
-              <div className="relative w-full bg-[#1A1A1A] rounded-3xl p-8 sm:p-10 flex flex-col items-center justify-between text-white shadow-2xl space-y-6">
-                <div className="w-full flex items-center justify-center border-b border-white/20 pb-4">
-                  <span className="text-xs font-label text-[#FBE87E] font-bold tracking-widest uppercase">
-                    EST. 1863
-                  </span>
-                </div>
-
-                {/* Group Logo */}
-                <a
-                  href="https://www.chemmanurinternationalgroup.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="py-3 flex items-center justify-center w-full min-h-[90px] group cursor-pointer"
-                >
-                  <Image
-                    src="/logo/group-logo.webp"
-                    alt="Boby Chemmanur International Group Official Logo"
-                    width={200}
-                    height={100}
-                    className="w-auto h-14 sm:h-20 object-contain filter drop-shadow-md group-hover:scale-105 transition-transform duration-300"
-                    style={{ width: "auto", height: "auto" }}
-                    priority
-                  />
-                </a>
-
-                <div className="space-y-2 text-center border-t border-white/20 pt-4 w-full">
-                  <span className="text-3xl sm:text-4xl font-headline font-black text-[#FBE87E] block">
-                    160+ Years
-                  </span>
-                  <p className="text-sm font-headline font-bold text-white">
-                    Boby Chemmanur International Group
-                  </p>
-                  <p className="text-xs font-body text-gray-300">
-                    Operations spanning India, USA, GCC and international markets.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
+            {/* Desktop Large Group Logo Display (Hidden on mobile < lg, shown on lg+) */}
+            <div className="hidden lg:flex lg:col-span-5 items-center justify-center">
+              <GroupLogoCard GENTLE_EASE={GENTLE_EASE} />
+            </div>
           </div>
 
           {/* Group at a Glance Stats */}
@@ -1372,3 +1335,54 @@ function CrownIcon(props) {
     </svg>
   );
 }
+
+function GroupLogoCard({ GENTLE_EASE }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.9, ease: GENTLE_EASE }}
+      className="w-full flex items-center justify-center cursor-pointer hover:-translate-y-1 transition-transform duration-300 ease-out"
+    >
+      <div className="relative w-full bg-[#1A1A1A] rounded-3xl p-8 sm:p-10 flex flex-col items-center justify-between text-white shadow-2xl space-y-6">
+        <div className="w-full flex items-center justify-center border-b border-white/20 pb-4">
+          <span className="text-xs font-label text-[#FBE87E] font-bold tracking-widest uppercase">
+            EST. 1863
+          </span>
+        </div>
+
+        {/* Group Logo */}
+        <a
+          href="https://www.chemmanurinternationalgroup.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="py-3 flex items-center justify-center w-full min-h-[90px] group cursor-pointer"
+        >
+          <Image
+            src="/logo/group-logo.webp"
+            alt="Boby Chemmanur International Group Official Logo"
+            width={200}
+            height={100}
+            className="w-auto h-14 sm:h-20 object-contain filter drop-shadow-md group-hover:scale-105 transition-transform duration-300"
+            style={{ width: "auto", height: "auto" }}
+            priority
+          />
+        </a>
+
+        <div className="space-y-2 text-center border-t border-white/20 pt-4 w-full">
+          <span className="text-3xl sm:text-4xl font-headline font-black text-[#FBE87E] block">
+            160+ Years
+          </span>
+          <p className="text-sm font-headline font-bold text-white">
+            Boby Chemmanur International Group
+          </p>
+          <p className="text-xs font-body text-gray-300">
+            Operations spanning India, USA, GCC and international markets.
+          </p>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
