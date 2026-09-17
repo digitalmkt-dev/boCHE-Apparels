@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import ProgressiveImage from "@/components/ProgressiveImage";
+import Image from "next/image";
 
 import { usePathname } from "next/navigation";
 import { Menu, X, ArrowRight, Phone, Mail } from "lucide-react";
@@ -63,7 +63,7 @@ export default function Header({ onOpenQuoteModal }) {
             <div className="w-full max-w-7xl rounded-full bg-white/95 backdrop-blur-md border border-[#E5E5E2] shadow-2xl py-3.5 sm:py-5 px-5 sm:px-10 mt-3 sm:mt-5 flex items-center justify-between">
               {/* Logo */}
               <Link href="/" className="flex items-center gap-3 group">
-                <ProgressiveImage
+                <Image
                   src="/logo/bocheapprels.webp"
                   alt="boCHE Apparels Logo"
                   width={220}
@@ -129,7 +129,7 @@ export default function Header({ onOpenQuoteModal }) {
           >
             <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
               <Link href="/" className="flex items-center gap-3 group">
-                <ProgressiveImage
+                <Image
                   src="/logo/bocheapprels.webp"
                   alt="boCHE Apparels Logo"
                   width={200}
@@ -198,7 +198,7 @@ export default function Header({ onOpenQuoteModal }) {
           <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
             {/* Brand Logo */}
             <Link href="/" className="flex items-center gap-3 group">
-              <ProgressiveImage
+              <Image
                 src="/logo/bocheapprels2.webp"
                 alt="boCHE Apparels Logo"
                 width={200}
@@ -274,7 +274,7 @@ export default function Header({ onOpenQuoteModal }) {
         {/* Top Header */}
         <div className="p-6 border-b border-[#E5E5E2] flex items-center justify-between bg-[#F9F9F9]">
           <Link href="/" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2">
-            <ProgressiveImage
+            <Image
               src={isHomePage ? "/logo/bocheapprels.webp" : "/logo/bocheapprels2.webp"}
               alt="boCHE Apparels Logo"
               width={180}

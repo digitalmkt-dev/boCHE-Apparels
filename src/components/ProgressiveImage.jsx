@@ -8,12 +8,35 @@ export default function ProgressiveImage({
   src,
   alt = "",
   className = "",
-  placeholder = "blur",
+  placeholder,
   blurDataURL,
   onLoad,
+  noBlur = false,
   ...props
 }) {
   const [isLoaded, setIsLoaded] = useState(false);
+
+  const cleanSrc = typeof src === "string" ? src : src?.src || "";
+  const isLogoOrIcon =
+    noBlur ||
+    cleanSrc.includes("/logo/") ||
+    cleanSrc.includes("/icons/") ||
+    cleanSrc.includes("/group_logos/") ||
+    cleanSrc.includes("favicon") ||
+    cleanSrc.includes("logo");
+
+  // For logos and icons, render crisp image directly with no blur effect
+  if (isLogoOrIcon) {
+    return (
+      <Image
+        src={src}
+        alt={alt}
+        onLoad={onLoad}
+        className={className}
+        {...props}
+      />
+    );
+  }
 
   const resolvedBlurURL = blurDataURL || getBlurDataURL(src);
 
@@ -21,7 +44,7 @@ export default function ProgressiveImage({
     <Image
       src={src}
       alt={alt}
-      placeholder={placeholder}
+      placeholder={placeholder || "blur"}
       blurDataURL={resolvedBlurURL}
       onLoad={(e) => {
         setIsLoaded(true);

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ProgressiveImage from "@/components/ProgressiveImage";
+import Image from "next/image";
 
 import { Mail, Phone, MapPin, Award } from "lucide-react";
 import { COMPANY_INFO } from "@/data/companyData";
@@ -73,7 +73,7 @@ export default function Footer() {
                 lg:items-start
               "
             >
-              <ProgressiveImage
+              <Image
                 src="/logo/bocheapprels2.webp"
                 alt="boCHE Apparels Logo"
                 width={180}
@@ -503,7 +503,7 @@ export default function Footer() {
               A VENTURE OF
             </span>
 
-            <ProgressiveImage
+            <Image
               src="/logo/group-logo.webp"
               alt="Boby Chemmanur International Group Emblem"
               width={140}
