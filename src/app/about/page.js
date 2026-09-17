@@ -1123,6 +1123,11 @@ export default function AboutPage() {
                 </p>
               </div>
 
+              {/* Mobile Chairman Photo Card (Shown right below main heading on mobile < lg) */}
+              <div className="block lg:hidden my-6">
+                <ChairmanPhotoCard GENTLE_EASE={GENTLE_EASE} />
+              </div>
+
               {/* Einstein Quote Header */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -1189,35 +1194,10 @@ export default function AboutPage() {
               }}
               className="lg:col-span-5 space-y-6 flex flex-col items-center lg:pt-14"
             >
-              {/* Chairman Photo Card */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, ease: GENTLE_EASE }}
-                className="relative w-full max-w-sm aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20 group cursor-pointer hover:-translate-y-1 transition-transform duration-300 ease-out"
-              >
-                <Image
-                  src="/images/boche 1.webp"
-                  alt="Dr. Boby Chemmanur (boCHE) Chairman"
-                  fill
-                  className="object-cover object-top group-hover:scale-105 transition-transform duration-300 ease-out"
-                  priority
-                  sizes="(max-width: 768px) 100vw, 384px"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/90 via-transparent to-transparent" />
-                <div className="absolute bottom-5 left-5 right-5 text-white space-y-1">
-                  <span className="text-xs font-label font-bold tracking-widest text-[#FBE87E] uppercase block">
-                    CHAIRMAN & FOUNDER
-                  </span>
-                  <p className="text-lg font-headline font-bold">
-                    Dr. Boby Chemmanur — boCHE
-                  </p>
-                  <p className="text-xs font-body text-gray-300">
-                    Boby Chemmanur International Group
-                  </p>
-                </div>
-              </motion.div>
+              {/* Desktop Chairman Photo Card (Hidden on mobile < lg, shown on lg+) */}
+              <div className="hidden lg:block w-full">
+                <ChairmanPhotoCard GENTLE_EASE={GENTLE_EASE} />
+              </div>
 
               {/* Awards Card */}
               <motion.div
@@ -1385,4 +1365,38 @@ function GroupLogoCard({ GENTLE_EASE }) {
     </motion.div>
   );
 }
+
+function ChairmanPhotoCard({ GENTLE_EASE }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, ease: GENTLE_EASE }}
+      className="relative w-full max-w-sm aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20 group cursor-pointer hover:-translate-y-1 transition-transform duration-300 ease-out mx-auto"
+    >
+      <Image
+        src="/images/boche 1.webp"
+        alt="Dr. Boby Chemmanur (boCHE) Chairman"
+        fill
+        className="object-cover object-top group-hover:scale-105 transition-transform duration-300 ease-out"
+        priority
+        sizes="(max-width: 768px) 100vw, 384px"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/90 via-transparent to-transparent" />
+      <div className="absolute bottom-5 left-5 right-5 text-white space-y-1">
+        <span className="text-xs font-label font-bold tracking-widest text-[#FBE87E] uppercase block">
+          CHAIRMAN & FOUNDER
+        </span>
+        <p className="text-lg font-headline font-bold">
+          Dr. Boby Chemmanur — boCHE
+        </p>
+        <p className="text-xs font-body text-gray-300">
+          Boby Chemmanur International Group
+        </p>
+      </div>
+    </motion.div>
+  );
+}
+
 
