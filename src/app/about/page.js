@@ -493,15 +493,7 @@ export default function AboutPage() {
             </motion.h2>
 
             <p className="text-base font-body text-[#555555] leading-relaxed">
-              <strong className="text-[#1A1A1A]">boCHE Apparels</strong> is a garment manufacturing company based in Tirupur, Tamil Nadu, delivering apparel manufacturing solutions for men’s wear, women’s wear and kids wear.
-            </p>
-
-            <p className="text-base font-body text-[#555555] leading-relaxed">
-              Registered as <strong className="text-[#1A1A1A]">Boby Chemmanur Enterprises Pvt Ltd</strong> and operating as part of the <strong className="text-[#1A1A1A]">Boby Chemmanur International Group</strong>, boCHE Apparels combines skilled production teams, modern machinery and buyer-focused manufacturing to create garments that meet customer specifications and quality expectations.
-            </p>
-
-            <p className="text-base font-body text-[#555555] leading-relaxed">
-              Our approach is built around consistent product quality, timely delivery, new product development and customized garment requirements.
+              <strong className="text-[#1A1A1A]">boCHE Apparels</strong>, part of <strong className="text-[#1A1A1A]">Boby Chemmanur International Group</strong>, is a prominent clothing manufacturing unit located in Tirupur, Tamil Nadu &amp; India. Specializing in high-quality apparel production, boCHE offers a wide range of garments including men’s, women’s, and children’s wear, along with custom designs and private label services. The factory is equipped with advanced technology and adheres to strict quality control standards to ensure the production of durable and stylish clothing. With a strong focus on sustainability and efficiency, boCHE Garments Factory caters to both domestic and international markets, delivering products that meet global quality and fashion standards.
             </p>
 
             <motion.div
