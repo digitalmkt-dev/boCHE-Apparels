@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -24,9 +24,19 @@ import {
 
 export default function AboutPage() {
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
   const carouselRef = useRef(null);
   const qualityPolicyRef = useRef(null);
   const chairmanSectionRef = useRef(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 1024);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const { scrollYProgress: qualityScrollProgress } = useScroll({
     target: qualityPolicyRef,
@@ -1098,7 +1108,7 @@ export default function AboutPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1.0, ease: GENTLE_EASE }}
-          className="bg-[#1A1A1A] text-white rounded-3xl p-8 sm:p-12 space-y-12 relative overflow-hidden shadow-2xl"
+          className="bg-[#1A1A1A] text-white rounded-3xl p-6 sm:p-12 pb-12 sm:pb-16 space-y-12 relative overflow-hidden shadow-2xl"
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
             {/* Left Column: Comprehensive Leadership & Life Story */}
@@ -1186,13 +1196,13 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Right Column: Chairman Photo & Awards Cards (Moving downwards with Parallax) */}
+            {/* Right Column: Chairman Photo & Awards Cards (Moving downwards with Parallax on Desktop) */}
             <motion.div
               style={{
-                y: chairmanCardsY,
-                willChange: "transform",
+                y: isDesktop ? chairmanCardsY : 0,
+                willChange: isDesktop ? "transform" : "auto",
               }}
-              className="lg:col-span-5 space-y-6 flex flex-col items-center lg:pt-14"
+              className="lg:col-span-5 space-y-6 flex flex-col items-center lg:pt-14 w-full"
             >
               {/* Desktop Chairman Photo Card (Hidden on mobile < lg, shown on lg+) */}
               <div className="hidden lg:block w-full">
