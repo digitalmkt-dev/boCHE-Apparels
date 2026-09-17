@@ -126,10 +126,10 @@ export default function AboutPage() {
     },
     {
       label: "PRODUCTION CAPACITY",
-      value: "Basic: 80,000 pcs/month\nFashion: 50,000 pcs/month",
+      value: "1,300,000+ Pcs / Month",
       iconSrc: "/icons/production capacity.webp",
       iconAlt: "Production Capacity",
-      desc: "Garment manufacturing capability",
+      desc: "Includes Basic & Fashion Garments",
     },
     {
       label: "EXPERIENCE",
