@@ -139,7 +139,7 @@ export default function AboutUsSection({ onOpenQuoteModal }) {
               transition={{ duration: 0.9, ease: GENTLE_LANDING_EASE, delay: 0.35 }}
               className="text-sm sm:text-base font-body text-[#555555] leading-relaxed w-full lg:max-w-[500px] text-left"
             >
-              {"boCHE Apparels is a garment manufacturing company in Tirupur, India, delivering reliable apparel manufacturing solution for men's wear, women's wear and kids wear. We combine skilled production, modern machinery, buyer-specific customization and a strong focus on consistent product quality and timely delivery."}
+              <strong className="text-[#1A1A1A]">boCHE Apparels</strong> is a garment manufacturing company in Tirupur, India, delivering reliable apparel manufacturing solution for men’s wear, women’s wear and kids wear. We combine skilled production, modern machinery, buyer-specific customization and a strong focus on consistent product quality and timely delivery.
             </motion.p>
 
             {/* Checklist 2x2 Grid - Slow & Smooth Slide UP One by One */}
