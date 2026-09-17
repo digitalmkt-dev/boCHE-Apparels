@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
-import { getBlurDataURL } from "@/utils/blurUtils";
+import ProgressiveImage from "@/components/ProgressiveImage";
+
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 
@@ -34,13 +34,12 @@ export default function PageHeaderBanner({ title, subtitle, breadcrumb, bgImage 
           transform: `translate3d(0, ${scrollY * 0.35}px, 0) scale(1.05)`,
         }}
       >
-        <Image
+        <ProgressiveImage
           src={bgImage}
           alt={title}
           fill
           priority
-          className="object-cover object-center opacity-70"
-         placeholder="blur" blurDataURL={getBlurDataURL(bgImage)} />
+          className="object-cover object-center opacity-70" />
       </div>
 
       {/* Secondary Color Dark Gradient Overlay */}

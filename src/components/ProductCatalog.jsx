@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect, Suspense } from "react";
-import Image from "next/image";
-import { getBlurDataURL } from "@/utils/blurUtils";
+import ProgressiveImage from "@/components/ProgressiveImage";
+
 import { useSearchParams } from "next/navigation";
 import { PhoneCall } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -356,14 +356,13 @@ function ProductCatalogContent({ onOpenQuoteModal }) {
               >
                 {/* Product Image Container */}
                 <div className="relative w-full aspect-[4/5] rounded-[20px] overflow-hidden shadow-xs">
-                  <Image
+                  <ProgressiveImage
                     src={product.image}
                     alt={product.name}
                     fill
                     unoptimized
                     className="object-cover pointer-events-none"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                   placeholder="blur" blurDataURL={getBlurDataURL(product.image)} />
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                 </div>
               </motion.div>
             ))}

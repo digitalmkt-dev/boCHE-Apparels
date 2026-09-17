@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
-import { getBlurDataURL } from "@/utils/blurUtils";
+import ProgressiveImage from "@/components/ProgressiveImage";
+
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
@@ -100,13 +100,12 @@ export default function ServicesShowcaseSection() {
               >
                 {/* Non-clickable Image Frame with Service Title */}
                 <div className="relative w-full aspect-[4/3.2] rounded-[24px] overflow-hidden bg-[#EAEAEA] shadow-[0_12px_30px_rgba(0,0,0,0.06)] border border-black/5">
-                  <Image
+                  <ProgressiveImage
                     src={service.image}
                     alt={service.title}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover object-center"
-                   placeholder="blur" blurDataURL={getBlurDataURL(service.image)} />
+                    className="object-cover object-center" />
 
                   {/* Dark gradient overlay at bottom for title readability */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent opacity-85" />

@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { getBlurDataURL } from "@/utils/blurUtils";
+import ProgressiveImage from "@/components/ProgressiveImage";
+
 import { usePathname } from "next/navigation";
 import { Menu, X, ArrowRight, Phone, Mail } from "lucide-react";
 import { COMPANY_INFO } from "@/data/companyData";
@@ -63,15 +63,14 @@ export default function Header({ onOpenQuoteModal }) {
             <div className="w-full max-w-7xl rounded-full bg-white/95 backdrop-blur-md border border-[#E5E5E2] shadow-2xl py-3.5 sm:py-5 px-5 sm:px-10 mt-3 sm:mt-5 flex items-center justify-between">
               {/* Logo */}
               <Link href="/" className="flex items-center gap-3 group">
-                <Image
+                <ProgressiveImage
                   src="/logo/bocheapprels.webp"
                   alt="boCHE Apparels Logo"
                   width={220}
                   height={60}
                   unoptimized
                   className="h-14 sm:h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
-                  priority
-                 placeholder="blur" blurDataURL={getBlurDataURL("/logo/bocheapprels.webp")} />
+                  priority />
               </Link>
 
               {/* Desktop Nav Links */}
@@ -130,15 +129,14 @@ export default function Header({ onOpenQuoteModal }) {
           >
             <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
               <Link href="/" className="flex items-center gap-3 group">
-                <Image
+                <ProgressiveImage
                   src="/logo/bocheapprels.webp"
                   alt="boCHE Apparels Logo"
                   width={200}
                   height={54}
                   unoptimized
                   className="h-13 sm:h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
-                  priority
-                 placeholder="blur" blurDataURL={getBlurDataURL("/logo/bocheapprels.webp")} />
+                  priority />
               </Link>
 
               <nav className="hidden lg:flex items-center gap-7">
@@ -200,15 +198,14 @@ export default function Header({ onOpenQuoteModal }) {
           <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
             {/* Brand Logo */}
             <Link href="/" className="flex items-center gap-3 group">
-              <Image
+              <ProgressiveImage
                 src="/logo/bocheapprels2.webp"
                 alt="boCHE Apparels Logo"
                 width={200}
                 height={54}
                 unoptimized
                 className="h-13 sm:h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
-                priority
-               placeholder="blur" blurDataURL={getBlurDataURL("/logo/bocheapprels2.webp")} />
+                priority />
             </Link>
 
             {/* Desktop Nav Links in White Text */}
@@ -277,14 +274,13 @@ export default function Header({ onOpenQuoteModal }) {
         {/* Top Header */}
         <div className="p-6 border-b border-[#E5E5E2] flex items-center justify-between bg-[#F9F9F9]">
           <Link href="/" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2">
-            <Image
+            <ProgressiveImage
               src={isHomePage ? "/logo/bocheapprels.webp" : "/logo/bocheapprels2.webp"}
               alt="boCHE Apparels Logo"
               width={180}
               height={50}
               unoptimized
-              className="h-13 sm:h-11 w-auto object-contain"
-             placeholder="blur" blurDataURL={getBlurDataURL(isHomePage ? "/logo/bocheapprels.webp" : "/logo/bocheapprels2.webp")} />
+              className="h-13 sm:h-11 w-auto object-contain" />
           </Link>
 
           <button

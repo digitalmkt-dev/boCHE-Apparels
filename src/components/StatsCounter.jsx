@@ -1,8 +1,8 @@
 "use client";
 
 import { useRef } from "react";
-import Image from "next/image";
-import { getBlurDataURL } from "@/utils/blurUtils";
+import ProgressiveImage from "@/components/ProgressiveImage";
+
 import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function StatsCounter() {
@@ -51,13 +51,12 @@ export default function StatsCounter() {
         style={{ y: yParallaxDesktop, willChange: "transform" }}
         className="hidden md:block absolute inset-0 -top-[50%] -bottom-[50%] w-full h-[200%] z-0 pointer-events-none"
       >
-        <Image
+        <ProgressiveImage
           src="/images/thread-bg.webp"
           alt="boCHE Apparel Horizontal Thread Background"
           fill
           className="object-cover object-center opacity-100"
-          sizes="(min-width: 768px) 100vw, 1px"
-         placeholder="blur" blurDataURL={getBlurDataURL("/images/thread-bg.webp")} />
+          sizes="(min-width: 768px) 100vw, 1px" />
       </motion.div>
 
       {/* Vertical Thread Background for All Vertical / Mobile / Portrait Viewports (below md) */}
@@ -65,14 +64,13 @@ export default function StatsCounter() {
         style={{ y: yParallaxMobile, willChange: "transform" }}
         className="block md:hidden absolute inset-0 -top-48 -bottom-48 w-full h-[calc(100%+384px)] z-0 pointer-events-none"
       >
-        <Image
+        <ProgressiveImage
           src="/images/thread-bgvrt.webp"
           alt="boCHE Apparel Vertical Thread Background"
           fill
           className="object-cover object-center opacity-100"
           sizes="(max-width: 768px) 100vw, 1px"
-          priority
-         placeholder="blur" blurDataURL={getBlurDataURL("/images/thread-bgvrt.webp")} />
+          priority />
       </motion.div>
 
       {/* Stats Cards Grid (White Cards Layout) */}
@@ -85,7 +83,7 @@ export default function StatsCounter() {
                 className="bg-white/90 backdrop-blur-md border border-[#E5E5E2] rounded-3xl p-6 sm:p-7 hover:shadow-xl transition-all duration-300 text-center lg:text-left space-y-2.5 shadow-md group"
               >
                 <div className="w-11 h-11 rounded-2xl bg-[#FBE87E] flex items-center justify-center mx-auto lg:mx-0 shadow-sm group-hover:scale-105 transition-transform overflow-hidden">
-                  <Image src={stat.iconSrc} alt={stat.iconAlt} width={28} height={28} className="w-7 h-7 object-contain"  placeholder="blur" blurDataURL={getBlurDataURL(stat.iconSrc)} />
+                  <ProgressiveImage src={stat.iconSrc} alt={stat.iconAlt} width={28} height={28} className="w-7 h-7 object-contain" />
                 </div>
 
                 <div className="text-xl sm:text-2xl font-headline font-extrabold text-[#1A1A1A] tracking-tight pt-1 leading-snug">

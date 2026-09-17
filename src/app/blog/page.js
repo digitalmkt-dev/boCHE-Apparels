@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
-import { getBlurDataURL } from "@/utils/blurUtils";
+import ProgressiveImage from "@/components/ProgressiveImage";
+
 import Link from "next/link";
 import PageHeaderBanner from "@/components/PageHeaderBanner";
 import QuoteModal from "@/components/QuoteModal";
@@ -71,12 +71,11 @@ export default function BlogPage() {
             >
               <div className="relative h-56 w-full bg-[#F3F3F1] overflow-hidden p-2">
                 <div className="relative h-full w-full rounded-2xl overflow-hidden">
-                  <Image
+                  <ProgressiveImage
                     src={post.image}
                     alt={post.title}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                   placeholder="blur" blurDataURL={getBlurDataURL(post.image)} />
+                    className="object-cover group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute top-3 left-3">
                     <span className="bg-[#FBE87E] text-[#1A1A1A] text-[11px] font-label font-extrabold px-3 py-1 rounded-xl shadow-sm">
                       {post.category}

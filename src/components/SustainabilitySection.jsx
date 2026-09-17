@@ -1,5 +1,5 @@
-import Image from "next/image";
-import { getBlurDataURL } from "@/utils/blurUtils";
+import ProgressiveImage from "@/components/ProgressiveImage";
+
 import Link from "next/link";
 import { SUSTAINABILITY_PILLARS } from "@/data/companyData";
 import { Leaf, ArrowRight } from "lucide-react";
@@ -13,12 +13,11 @@ export default function SustainabilitySection() {
           <div className="lg:col-span-5 relative">
             <div className="relative h-[420px] rounded-3xl overflow-hidden border border-[#E5E5E2] shadow-xl p-2 bg-[#FFFFFF]">
               <div className="relative h-full w-full rounded-2xl overflow-hidden">
-                <Image
+                <ProgressiveImage
                   src="/images/fabric-sourcing.webp"
                   alt="boCHE Apparels Eco Friendly Fabrics"
                   fill
-                  className="object-cover"
-                 placeholder="blur" blurDataURL={getBlurDataURL("/images/fabric-sourcing.webp")} />
+                  className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/60 via-transparent to-transparent" />
                 
                 <div className="absolute bottom-6 left-6 right-6 bg-[#FFFFFF]/95 backdrop-blur-md border border-[#E5E5E2] rounded-2xl p-4 shadow-lg">

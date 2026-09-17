@@ -1,8 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
-import { getBlurDataURL } from "@/utils/blurUtils";
+import ProgressiveImage from "@/components/ProgressiveImage";
 import Link from "next/link";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -80,7 +79,7 @@ export default function HeroSection({ onOpenQuoteModal }) {
             {/* Vertical Image for Mobile (when mobileImage is provided) */}
             {slide.mobileImage ? (
               <>
-                <Image
+                <ProgressiveImage
                   src={slide.mobileImage}
                   alt={slide.title}
                   fill
@@ -89,8 +88,8 @@ export default function HeroSection({ onOpenQuoteModal }) {
                   className={`md:hidden object-cover object-center ${
                     isActive ? "animate-hero-zoom" : "scale-108"
                   }`}
-                 placeholder="blur" blurDataURL={getBlurDataURL(slide.mobileImage)} />
-                <Image
+                />
+                <ProgressiveImage
                   src={slide.image}
                   alt={slide.title}
                   fill
@@ -99,10 +98,10 @@ export default function HeroSection({ onOpenQuoteModal }) {
                   className={`hidden md:block object-cover ${objectPositionClass} ${
                     isActive ? "animate-hero-zoom" : "scale-108"
                   }`}
-                 placeholder="blur" blurDataURL={getBlurDataURL(slide.image)} />
+                />
               </>
             ) : (
-              <Image
+              <ProgressiveImage
                 src={slide.image}
                 alt={slide.title}
                 fill
@@ -111,7 +110,7 @@ export default function HeroSection({ onOpenQuoteModal }) {
                 className={`object-cover ${objectPositionClass} ${
                   isActive ? "animate-hero-zoom" : "scale-108"
                 }`}
-               placeholder="blur" blurDataURL={getBlurDataURL(slide.image)} />
+              />
             )}
           </div>
         );

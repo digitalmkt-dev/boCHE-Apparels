@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
-import { getBlurDataURL } from "@/utils/blurUtils";
+import ProgressiveImage from "@/components/ProgressiveImage";
+
 import { motion } from "framer-motion";
 import { SERVICES } from "@/data/companyData";
 import PageHeaderBanner from "@/components/PageHeaderBanner";
@@ -63,15 +63,14 @@ export default function ServicesPage() {
                 <div>
                   {/* Top Image Container */}
                   <div className="relative w-full aspect-[16/10] rounded-[18px] overflow-hidden bg-[#EAEAEA] shadow-2xs mb-4 shrink-0">
-                    <Image
+                    <ProgressiveImage
                       src={imgSrc}
                       alt={service.title}
                       fill
                       priority={index < 3}
                       unoptimized
                       className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                     placeholder="blur" blurDataURL={getBlurDataURL(imgSrc)} />
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                   </div>
 
                   {/* Top Yellow Pill Badge */}

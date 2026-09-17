@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
-import { getBlurDataURL } from "@/utils/blurUtils";
+import ProgressiveImage from "@/components/ProgressiveImage";
+
 import SustainabilitySection from "@/components/SustainabilitySection";
 import QuoteModal from "@/components/QuoteModal";
 import PageHeaderBanner from "@/components/PageHeaderBanner";
@@ -72,12 +72,11 @@ export default function SustainabilityPage() {
 
           <div className="lg:col-span-5 relative h-72 sm:h-80 rounded-2xl overflow-hidden border border-[#E5E5E2] p-2 bg-[#F9F9F9]">
             <div className="relative h-full w-full rounded-xl overflow-hidden">
-              <Image
+              <ProgressiveImage
                 src="/images/activewear.webp"
                 alt="Ethical Apparel Production"
                 fill
-                className="object-cover"
-               placeholder="blur" blurDataURL={getBlurDataURL("/images/activewear.webp")} />
+                className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/50 via-transparent to-transparent" />
             </div>
           </div>

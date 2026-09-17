@@ -1,8 +1,8 @@
 "use client";
 
 import { useRef } from "react";
-import Image from "next/image";
-import { getBlurDataURL } from "@/utils/blurUtils";
+import ProgressiveImage from "@/components/ProgressiveImage";
+
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ShieldCheck } from "lucide-react";
 
@@ -67,14 +67,13 @@ export default function QualityPolicySection() {
                 }}
                 className="relative w-full h-[140%] -top-[20%]"
               >
-                <Image
+                <ProgressiveImage
                   src="/images/quality-inspection.webp"
                   alt="boCHE Apparels Garment Quality Inspection and Standards Policy"
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 530px"
-                  className="object-cover object-center"
-                 placeholder="blur" blurDataURL={getBlurDataURL("/images/quality-inspection.webp")} />
+                  className="object-cover object-center" />
               </motion.div>
 
               {/* Floating Quality Assurance Badge */}

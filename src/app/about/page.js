@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import Image from "next/image";
-import { getBlurDataURL } from "@/utils/blurUtils";
+import ProgressiveImage from "@/components/ProgressiveImage";
+
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import PageHeaderBanner from "@/components/PageHeaderBanner";
@@ -532,13 +532,12 @@ export default function AboutPage() {
             className="lg:col-span-5 relative flex items-center justify-center cursor-pointer hover:-translate-y-1 transition-transform duration-300 ease-out"
           >
             <div className="relative w-full max-w-md aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white group">
-              <Image
+              <ProgressiveImage
                 src="/images/tailor.webp"
                 alt="boCHE Apparels Master Tailor & Precision Craftsmanship"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-300 ease-out"
-                priority
-               placeholder="blur" blurDataURL={getBlurDataURL("/images/tailor.webp")} />
+                priority />
               <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/80 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 text-white space-y-1">
                 <span className="text-xs font-label font-bold tracking-widest text-[#FBE87E] uppercase block">
@@ -602,7 +601,7 @@ export default function AboutPage() {
                   className="bg-white/90 backdrop-blur-md border border-[#E5E5E2] rounded-3xl p-6 sm:p-7 hover:shadow-xl transition-all duration-300 space-y-2.5 shadow-md group text-left"
                 >
                   <div className="w-11 h-11 rounded-2xl bg-[#FBE87E] flex items-center justify-center shadow-xs group-hover:scale-105 transition-transform overflow-hidden">
-                    <Image src={stat.iconSrc} alt={stat.iconAlt} width={28} height={28} className="w-7 h-7 object-contain"  placeholder="blur" blurDataURL={getBlurDataURL(stat.iconSrc)} />
+                    <ProgressiveImage src={stat.iconSrc} alt={stat.iconAlt} width={28} height={28} className="w-7 h-7 object-contain" />
                   </div>
 
                   <div className="text-xl sm:text-2xl font-headline font-extrabold text-[#1A1A1A] tracking-tight pt-1 leading-snug">
@@ -640,7 +639,7 @@ export default function AboutPage() {
               transition={{ duration: 0.7, ease: GENTLE_EASE }}
               className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FBE87E] text-[#1A1A1A] text-xs font-label font-bold uppercase tracking-wider"
             >
-              <Image src="/icons/mens wear.webp" alt="Garments for All Ages" width={14} height={14} className="w-3.5 h-3.5 object-contain"  placeholder="blur" blurDataURL={getBlurDataURL("/icons/mens wear.webp")} />
+              <ProgressiveImage src="/icons/mens wear.webp" alt="Garments for All Ages" width={14} height={14} className="w-3.5 h-3.5 object-contain" />
               <span>GARMENTS FOR ALL AGES</span>
             </motion.div>
             <motion.h2
@@ -679,7 +678,7 @@ export default function AboutPage() {
                       {cat.tag}
                     </span>
                     <div className="w-8 h-8 rounded-full bg-[#FAFAFA] border border-[#E5E5E2] flex items-center justify-center overflow-hidden">
-                      <Image
+                      <ProgressiveImage
                         src={
                           idx === 0
                             ? "/icons/mens wear.webp"
@@ -690,14 +689,7 @@ export default function AboutPage() {
                         alt={cat.category}
                         width={20}
                         height={20}
-                        className="w-5 h-5 object-contain"
-                       placeholder="blur" blurDataURL={getBlurDataURL(
-                          idx === 0
-                            ? "/icons/mens wear.webp"
-                            : idx === 1
-                            ? "/icons/womens wear.webp"
-                            : "/icons/kids and babywear.webp"
-                        )} />
+                        className="w-5 h-5 object-contain" />
                     </div>
                   </div>
                   <h3 className="text-2xl font-headline font-bold text-[#1A1A1A]">
@@ -780,7 +772,7 @@ export default function AboutPage() {
                 >
                   <div className="space-y-3">
                     <div className="w-12 h-12 rounded-xl bg-[#1A1A1A] flex items-center justify-center shadow-md overflow-hidden">
-                      <Image src={cap.iconSrc} alt={cap.iconAlt} width={32} height={32} className="w-8 h-8 object-contain"  placeholder="blur" blurDataURL={getBlurDataURL(cap.iconSrc)} />
+                      <ProgressiveImage src={cap.iconSrc} alt={cap.iconAlt} width={32} height={32} className="w-8 h-8 object-contain" />
                     </div>
 
                     <div>
@@ -892,7 +884,7 @@ export default function AboutPage() {
             className="bg-white border border-[#E5E5E2] rounded-3xl p-8 space-y-5 shadow-sm hover:-translate-y-1 hover:shadow-xl transition-all duration-300 ease-out relative overflow-hidden"
           >
             <div className="w-12 h-12 rounded-2xl bg-[#FBE87E] flex items-center justify-center shadow-sm overflow-hidden">
-              <Image src="/icons/vision.webp" alt="Vision" width={32} height={32} className="w-8 h-8 object-contain"  placeholder="blur" blurDataURL={getBlurDataURL("/icons/vision.webp")} />
+              <ProgressiveImage src="/icons/vision.webp" alt="Vision" width={32} height={32} className="w-8 h-8 object-contain" />
             </div>
 
             <span className="text-xs font-label font-bold text-[#555555] tracking-widest uppercase block">
@@ -929,7 +921,7 @@ export default function AboutPage() {
             className="bg-white border border-[#E5E5E2] rounded-3xl p-8 space-y-5 shadow-sm hover:-translate-y-1 hover:shadow-xl transition-all duration-300 ease-out relative overflow-hidden"
           >
             <div className="w-12 h-12 rounded-2xl bg-[#1A1A1A] flex items-center justify-center shadow-sm overflow-hidden">
-              <Image src="/icons/mission.webp" alt="Mission" width={32} height={32} className="w-8 h-8 object-contain"  placeholder="blur" blurDataURL={getBlurDataURL("/icons/mission.webp")} />
+              <ProgressiveImage src="/icons/mission.webp" alt="Mission" width={32} height={32} className="w-8 h-8 object-contain" />
             </div>
 
             <span className="text-xs font-label font-bold text-[#555555] tracking-widest uppercase block">
@@ -1078,14 +1070,13 @@ export default function AboutPage() {
                 <div className="space-y-3">
                   {/* Venture Logo Header */}
                   <div className="w-full h-32 sm:h-36 bg-[#FAFAFA] border border-[#E5E5E2] rounded-xl p-2 sm:p-3 flex items-center justify-center overflow-hidden shadow-2xs">
-                    <Image
+                    <ProgressiveImage
                       src={ven.logo}
                       alt={`${ven.name} Logo`}
                       width={320}
                       height={160}
                       className="max-h-24 sm:max-h-28 w-auto max-w-[95%] object-contain"
-                      style={{ width: "auto", height: "auto" }}
-                     placeholder="blur" blurDataURL={getBlurDataURL(ven.logo)} />
+                      style={{ width: "auto", height: "auto" }} />
                   </div>
 
                   <div>
@@ -1356,15 +1347,14 @@ function GroupLogoCard({ GENTLE_EASE }) {
           rel="noopener noreferrer"
           className="py-3 flex items-center justify-center w-full min-h-[90px] group cursor-pointer"
         >
-          <Image
+          <ProgressiveImage
             src="/logo/group-logo.webp"
             alt="Boby Chemmanur International Group Official Logo"
             width={200}
             height={100}
             className="w-auto h-14 sm:h-20 object-contain filter drop-shadow-md group-hover:scale-105 transition-transform duration-300"
             style={{ width: "auto", height: "auto" }}
-            priority
-           placeholder="blur" blurDataURL={getBlurDataURL("/logo/group-logo.webp")} />
+            priority />
         </a>
 
         <div className="space-y-2 text-center border-t border-white/20 pt-4 w-full">
@@ -1392,14 +1382,13 @@ function ChairmanPhotoCard({ GENTLE_EASE }) {
       transition={{ duration: 0.8, ease: GENTLE_EASE }}
       className="relative w-full max-w-sm aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20 group cursor-pointer hover:-translate-y-1 transition-transform duration-300 ease-out mx-auto"
     >
-      <Image
+      <ProgressiveImage
         src="/images/boche 1.webp"
         alt="Dr. Boby Chemmanur (boCHE) Chairman"
         fill
         className="object-cover object-top group-hover:scale-105 transition-transform duration-300 ease-out"
         priority
-        sizes="(max-width: 768px) 100vw, 384px"
-       placeholder="blur" blurDataURL={getBlurDataURL("/images/boche 1.webp")} />
+        sizes="(max-width: 768px) 100vw, 384px" />
       <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/90 via-transparent to-transparent" />
       <div className="absolute bottom-5 left-5 right-5 text-white space-y-1">
         <span className="text-xs font-label font-bold tracking-widest text-[#FBE87E] uppercase block">

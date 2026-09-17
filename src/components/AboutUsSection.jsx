@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
-import { getBlurDataURL } from "@/utils/blurUtils";
+import ProgressiveImage from "@/components/ProgressiveImage";
+
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
@@ -189,7 +189,7 @@ export default function AboutUsSection({ onOpenQuoteModal }) {
                     className="flex items-start gap-3"
                   >
                     <div className="w-10 h-10 rounded-xl bg-[#1A1A1A] flex items-center justify-center shrink-0 shadow-md overflow-hidden">
-                      <Image src={card.iconSrc} alt={card.iconAlt} width={28} height={28} className="w-7 h-7 object-contain"  placeholder="blur" blurDataURL={getBlurDataURL(card.iconSrc)} />
+                      <ProgressiveImage src={card.iconSrc} alt={card.iconAlt} width={28} height={28} className="w-7 h-7 object-contain" />
                     </div>
                     <div>
                       <h4 className="text-xs sm:text-sm font-bold text-[#1A1A1A] leading-snug">
@@ -236,13 +236,12 @@ export default function AboutUsSection({ onOpenQuoteModal }) {
                 transition={{ duration: 1.35, ease: GENTLE_LANDING_EASE, delay: 0.65 }}
                 className="relative z-10 w-36 sm:w-48 md:w-52 lg:w-[190px] xl:w-[230px] h-[240px] sm:h-[300px] md:h-[320px] lg:h-[290px] xl:h-[340px] rounded-[24px] sm:rounded-[28px] overflow-hidden shadow-xl border-4 border-white shrink-0 -mr-8 sm:-mr-10 lg:-mr-10 xl:-mr-12 mb-4 sm:mb-6"
               >
-                <Image
+                <ProgressiveImage
                   src="/images/about-artisan.webp"
                   alt="Precision Artisan Garment Quality Control"
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 144px, (max-width: 1280px) 190px, 230px"
-                 placeholder="blur" blurDataURL={getBlurDataURL("/images/about-artisan.webp")} />
+                  sizes="(max-width: 768px) 144px, (max-width: 1280px) 190px, 230px" />
               </motion.div>
 
               {/* Main Tall Right Image (Inspectors & Fabric) */}
@@ -253,14 +252,13 @@ export default function AboutUsSection({ onOpenQuoteModal }) {
                 transition={{ duration: 1.35, ease: GENTLE_LANDING_EASE, delay: 0.2 }}
                 className="relative z-0 w-48 sm:w-68 md:w-72 lg:w-[270px] xl:w-[320px] h-[330px] sm:h-[420px] md:h-[440px] lg:h-[420px] xl:h-[490px] rounded-[28px] sm:rounded-[32px] overflow-hidden shadow-2xl border-4 border-white shrink-0"
               >
-                <Image
+                <ProgressiveImage
                   src="/images/about-inspectors.webp"
                   alt="Texora Apparel Quality Inspection"
                   fill
                   className="object-cover"
                   priority
-                  sizes="(max-width: 768px) 192px, (max-width: 1280px) 270px, 320px"
-                 placeholder="blur" blurDataURL={getBlurDataURL("/images/about-inspectors.webp")} />
+                  sizes="(max-width: 768px) 192px, (max-width: 1280px) 270px, 320px" />
               </motion.div>
 
               {/* Vertical Side Label */}

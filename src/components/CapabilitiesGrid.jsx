@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
-import { getBlurDataURL } from "@/utils/blurUtils";
+import ProgressiveImage from "@/components/ProgressiveImage";
+
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import { SERVICES } from "@/data/companyData";
 
@@ -47,7 +47,7 @@ export default function CapabilitiesGrid({ onOpenQuoteModal }) {
                   <div className="flex items-center justify-between">
                     <div className="w-12 h-12 rounded-2xl bg-[#FBE87E] flex items-center justify-center group-hover:bg-[#1A1A1A] transition-colors duration-300 shadow-sm overflow-hidden">
                       {iconSrc ? (
-                        <Image src={iconSrc} alt={service.title} width={32} height={32} className="w-8 h-8 object-contain"  placeholder="blur" blurDataURL={getBlurDataURL(iconSrc)} />
+                        <ProgressiveImage src={iconSrc} alt={service.title} width={32} height={32} className="w-8 h-8 object-contain" />
                       ) : (
                         <span className="text-[#1A1A1A] group-hover:text-[#FBE87E] text-xs font-bold">{service.title[0]}</span>
                       )}

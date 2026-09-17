@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
-import { getBlurDataURL } from "@/utils/blurUtils";
+import ProgressiveImage from "@/components/ProgressiveImage";
+
 import { Mail, Phone, MapPin, Award } from "lucide-react";
 import { COMPANY_INFO } from "@/data/companyData";
 
@@ -73,14 +73,13 @@ export default function Footer() {
                 lg:items-start
               "
             >
-              <Image
+              <ProgressiveImage
                 src="/logo/bocheapprels2.webp"
                 alt="boCHE Apparels Logo"
                 width={180}
                 height={54}
                 unoptimized
-                className="h-14 sm:h-14 md:h-12 lg:h-12 w-auto object-contain"
-               placeholder="blur" blurDataURL={getBlurDataURL("/logo/bocheapprels2.webp")} />
+                className="h-14 sm:h-14 md:h-12 lg:h-12 w-auto object-contain" />
 
               <span
                 className="
@@ -504,13 +503,12 @@ export default function Footer() {
               A VENTURE OF
             </span>
 
-            <Image
+            <ProgressiveImage
               src="/logo/group-logo.webp"
               alt="Boby Chemmanur International Group Emblem"
               width={140}
               height={140}
-              className="mt-3 h-24 sm:h-24 md:h-22 lg:h-24 w-auto object-contain brightness-110 group-hover:scale-105 transition-transform duration-300"
-             placeholder="blur" blurDataURL={getBlurDataURL("/logo/group-logo.webp")} />
+              className="mt-3 h-24 sm:h-24 md:h-22 lg:h-24 w-auto object-contain brightness-110 group-hover:scale-105 transition-transform duration-300" />
 
             <span
               className="

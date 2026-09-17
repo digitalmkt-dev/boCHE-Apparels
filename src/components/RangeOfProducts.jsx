@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
-import { getBlurDataURL } from "@/utils/blurUtils";
+import ProgressiveImage from "@/components/ProgressiveImage";
+
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
@@ -253,7 +253,7 @@ function ProductCard({ category }) {
     >
       {/* IMAGE */}
 
-      <Image
+      <ProgressiveImage
         src={category.image}
         alt={category.alt}
         fill
@@ -261,8 +261,7 @@ function ProductCard({ category }) {
         className="object-cover transition-transform duration-[750ms] ease-out group-hover:scale-[1.045]"
         style={{
           objectPosition: category.objectPosition,
-        }}
-       placeholder="blur" blurDataURL={getBlurDataURL(category.image)} />
+        }} />
 
       {/* GRADIENT */}
 
