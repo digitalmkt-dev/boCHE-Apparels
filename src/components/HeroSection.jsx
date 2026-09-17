@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { getBlurDataURL } from "@/utils/blurUtils";
 import Link from "next/link";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -88,7 +89,7 @@ export default function HeroSection({ onOpenQuoteModal }) {
                   className={`md:hidden object-cover object-center ${
                     isActive ? "animate-hero-zoom" : "scale-108"
                   }`}
-                />
+                 placeholder="blur" blurDataURL={getBlurDataURL(slide.mobileImage)} />
                 <Image
                   src={slide.image}
                   alt={slide.title}
@@ -98,7 +99,7 @@ export default function HeroSection({ onOpenQuoteModal }) {
                   className={`hidden md:block object-cover ${objectPositionClass} ${
                     isActive ? "animate-hero-zoom" : "scale-108"
                   }`}
-                />
+                 placeholder="blur" blurDataURL={getBlurDataURL(slide.image)} />
               </>
             ) : (
               <Image
@@ -110,7 +111,7 @@ export default function HeroSection({ onOpenQuoteModal }) {
                 className={`object-cover ${objectPositionClass} ${
                   isActive ? "animate-hero-zoom" : "scale-108"
                 }`}
-              />
+               placeholder="blur" blurDataURL={getBlurDataURL(slide.image)} />
             )}
           </div>
         );

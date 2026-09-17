@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { getBlurDataURL } from "@/utils/blurUtils";
 import { usePathname } from "next/navigation";
 import { Menu, X, ArrowRight, Phone, Mail } from "lucide-react";
 import { COMPANY_INFO } from "@/data/companyData";
@@ -70,7 +71,7 @@ export default function Header({ onOpenQuoteModal }) {
                   unoptimized
                   className="h-14 sm:h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
                   priority
-                />
+                 placeholder="blur" blurDataURL={getBlurDataURL("/logo/bocheapprels.webp")} />
               </Link>
 
               {/* Desktop Nav Links */}
@@ -137,7 +138,7 @@ export default function Header({ onOpenQuoteModal }) {
                   unoptimized
                   className="h-13 sm:h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
                   priority
-                />
+                 placeholder="blur" blurDataURL={getBlurDataURL("/logo/bocheapprels.webp")} />
               </Link>
 
               <nav className="hidden lg:flex items-center gap-7">
@@ -207,7 +208,7 @@ export default function Header({ onOpenQuoteModal }) {
                 unoptimized
                 className="h-13 sm:h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
                 priority
-              />
+               placeholder="blur" blurDataURL={getBlurDataURL("/logo/bocheapprels2.webp")} />
             </Link>
 
             {/* Desktop Nav Links in White Text */}
@@ -283,7 +284,7 @@ export default function Header({ onOpenQuoteModal }) {
               height={50}
               unoptimized
               className="h-13 sm:h-11 w-auto object-contain"
-            />
+             placeholder="blur" blurDataURL={getBlurDataURL(isHomePage ? "/logo/bocheapprels.webp" : "/logo/bocheapprels2.webp")} />
           </Link>
 
           <button

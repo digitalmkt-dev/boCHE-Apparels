@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { getBlurDataURL } from "@/utils/blurUtils";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
@@ -261,7 +262,7 @@ function ProductCard({ category }) {
         style={{
           objectPosition: category.objectPosition,
         }}
-      />
+       placeholder="blur" blurDataURL={getBlurDataURL(category.image)} />
 
       {/* GRADIENT */}
 

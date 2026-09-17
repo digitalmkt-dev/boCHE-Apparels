@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { getBlurDataURL } from "@/utils/blurUtils";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
@@ -188,7 +189,7 @@ export default function AboutUsSection({ onOpenQuoteModal }) {
                     className="flex items-start gap-3"
                   >
                     <div className="w-10 h-10 rounded-xl bg-[#1A1A1A] flex items-center justify-center shrink-0 shadow-md overflow-hidden">
-                      <Image src={card.iconSrc} alt={card.iconAlt} width={28} height={28} className="w-7 h-7 object-contain" />
+                      <Image src={card.iconSrc} alt={card.iconAlt} width={28} height={28} className="w-7 h-7 object-contain"  placeholder="blur" blurDataURL={getBlurDataURL(card.iconSrc)} />
                     </div>
                     <div>
                       <h4 className="text-xs sm:text-sm font-bold text-[#1A1A1A] leading-snug">
@@ -241,7 +242,7 @@ export default function AboutUsSection({ onOpenQuoteModal }) {
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 144px, (max-width: 1280px) 190px, 230px"
-                />
+                 placeholder="blur" blurDataURL={getBlurDataURL("/images/about-artisan.webp")} />
               </motion.div>
 
               {/* Main Tall Right Image (Inspectors & Fabric) */}
@@ -259,7 +260,7 @@ export default function AboutUsSection({ onOpenQuoteModal }) {
                   className="object-cover"
                   priority
                   sizes="(max-width: 768px) 192px, (max-width: 1280px) 270px, 320px"
-                />
+                 placeholder="blur" blurDataURL={getBlurDataURL("/images/about-inspectors.webp")} />
               </motion.div>
 
               {/* Vertical Side Label */}

@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import Image from "next/image";
+import { getBlurDataURL } from "@/utils/blurUtils";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function StatsCounter() {
@@ -56,7 +57,7 @@ export default function StatsCounter() {
           fill
           className="object-cover object-center opacity-100"
           sizes="(min-width: 768px) 100vw, 1px"
-        />
+         placeholder="blur" blurDataURL={getBlurDataURL("/images/thread-bg.webp")} />
       </motion.div>
 
       {/* Vertical Thread Background for All Vertical / Mobile / Portrait Viewports (below md) */}
@@ -71,7 +72,7 @@ export default function StatsCounter() {
           className="object-cover object-center opacity-100"
           sizes="(max-width: 768px) 100vw, 1px"
           priority
-        />
+         placeholder="blur" blurDataURL={getBlurDataURL("/images/thread-bgvrt.webp")} />
       </motion.div>
 
       {/* Stats Cards Grid (White Cards Layout) */}
@@ -84,7 +85,7 @@ export default function StatsCounter() {
                 className="bg-white/90 backdrop-blur-md border border-[#E5E5E2] rounded-3xl p-6 sm:p-7 hover:shadow-xl transition-all duration-300 text-center lg:text-left space-y-2.5 shadow-md group"
               >
                 <div className="w-11 h-11 rounded-2xl bg-[#FBE87E] flex items-center justify-center mx-auto lg:mx-0 shadow-sm group-hover:scale-105 transition-transform overflow-hidden">
-                  <Image src={stat.iconSrc} alt={stat.iconAlt} width={28} height={28} className="w-7 h-7 object-contain" />
+                  <Image src={stat.iconSrc} alt={stat.iconAlt} width={28} height={28} className="w-7 h-7 object-contain"  placeholder="blur" blurDataURL={getBlurDataURL(stat.iconSrc)} />
                 </div>
 
                 <div className="text-xl sm:text-2xl font-headline font-extrabold text-[#1A1A1A] tracking-tight pt-1 leading-snug">

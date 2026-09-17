@@ -2,6 +2,7 @@
 
 import { useState, useEffect, Suspense } from "react";
 import Image from "next/image";
+import { getBlurDataURL } from "@/utils/blurUtils";
 import { useSearchParams } from "next/navigation";
 import { PhoneCall } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -362,7 +363,7 @@ function ProductCatalogContent({ onOpenQuoteModal }) {
                     unoptimized
                     className="object-cover pointer-events-none"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
+                   placeholder="blur" blurDataURL={getBlurDataURL(product.image)} />
                 </div>
               </motion.div>
             ))}

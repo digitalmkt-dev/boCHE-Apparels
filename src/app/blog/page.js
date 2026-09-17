@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { getBlurDataURL } from "@/utils/blurUtils";
 import Link from "next/link";
 import PageHeaderBanner from "@/components/PageHeaderBanner";
 import QuoteModal from "@/components/QuoteModal";
@@ -75,7 +76,7 @@ export default function BlogPage() {
                     alt={post.title}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
+                   placeholder="blur" blurDataURL={getBlurDataURL(post.image)} />
                   <div className="absolute top-3 left-3">
                     <span className="bg-[#FBE87E] text-[#1A1A1A] text-[11px] font-label font-extrabold px-3 py-1 rounded-xl shadow-sm">
                       {post.category}

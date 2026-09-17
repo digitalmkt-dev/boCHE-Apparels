@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { getBlurDataURL } from "@/utils/blurUtils";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
@@ -105,7 +106,7 @@ export default function ServicesShowcaseSection() {
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover object-center"
-                  />
+                   placeholder="blur" blurDataURL={getBlurDataURL(service.image)} />
 
                   {/* Dark gradient overlay at bottom for title readability */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent opacity-85" />

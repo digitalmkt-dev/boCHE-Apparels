@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { getBlurDataURL } from "@/utils/blurUtils";
 import SustainabilitySection from "@/components/SustainabilitySection";
 import QuoteModal from "@/components/QuoteModal";
 import PageHeaderBanner from "@/components/PageHeaderBanner";
@@ -76,7 +77,7 @@ export default function SustainabilityPage() {
                 alt="Ethical Apparel Production"
                 fill
                 className="object-cover"
-              />
+               placeholder="blur" blurDataURL={getBlurDataURL("/images/activewear.webp")} />
               <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/50 via-transparent to-transparent" />
             </div>
           </div>

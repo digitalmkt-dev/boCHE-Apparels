@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { getBlurDataURL } from "@/utils/blurUtils";
 import { motion } from "framer-motion";
 import { SERVICES } from "@/data/companyData";
 import PageHeaderBanner from "@/components/PageHeaderBanner";
@@ -70,7 +71,7 @@ export default function ServicesPage() {
                       unoptimized
                       className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    />
+                     placeholder="blur" blurDataURL={getBlurDataURL(imgSrc)} />
                   </div>
 
                   {/* Top Yellow Pill Badge */}

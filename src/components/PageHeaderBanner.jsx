@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { getBlurDataURL } from "@/utils/blurUtils";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 
@@ -39,7 +40,7 @@ export default function PageHeaderBanner({ title, subtitle, breadcrumb, bgImage 
           fill
           priority
           className="object-cover object-center opacity-70"
-        />
+         placeholder="blur" blurDataURL={getBlurDataURL(bgImage)} />
       </div>
 
       {/* Secondary Color Dark Gradient Overlay */}
