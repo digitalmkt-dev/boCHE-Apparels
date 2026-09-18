@@ -541,6 +541,7 @@ export default function Footer() {
               flex
               flex-col
               items-center
+              justify-center
 
               gap-4
 
@@ -558,59 +559,17 @@ export default function Footer() {
 
               lg:col-span-4
               lg:mt-12
-              lg:flex-row
-              lg:justify-between
               lg:border-t
               lg:border-[#2A2A2A]
               lg:pt-6
-              lg:text-left
+              lg:text-center
               lg:text-xs
             "
           >
             <p className="leading-[1.6]">
               © {new Date().getFullYear()} {COMPANY_INFO.name}. All Rights
-              Reserved.
-              <br className="lg:hidden" /> Industrial Craft Garment Unit.
+              Reserved. Industrial Craft Garment Unit.
             </p>
-
-            <div
-              className="
-                flex
-                flex-wrap
-                items-center
-                justify-center
-
-                gap-x-3
-                gap-y-2
-
-                font-label
-                text-[8.5px]
-
-                text-slate-400
-
-                sm:text-[9px]
-                md:text-[9.5px]
-
-                lg:gap-4
-                lg:text-xs
-              "
-            >
-              <span className="cursor-pointer transition-colors hover:text-[#FBE87E]">
-                Privacy Policy
-              </span>
-
-              <span className="text-slate-600">|</span>
-
-              <span className="cursor-pointer transition-colors hover:text-[#FBE87E]">
-                Terms of Service
-              </span>
-
-              <span className="text-slate-600">|</span>
-
-              <span className="cursor-pointer transition-colors hover:text-[#FBE87E]">
-                Supplier Code of Conduct
-              </span>
-            </div>
           </div>
         </div>
       </div>
