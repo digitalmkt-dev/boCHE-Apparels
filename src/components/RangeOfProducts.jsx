@@ -69,17 +69,7 @@ export default function RangeOfProducts() {
             </motion.p>
           </div>
 
-          {/* Desktop right copy */}
-          <motion.p
-            initial={{ opacity: 0, x: 20, filter: "blur(4px)" }}
-            whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.85, ease: GENTLE_LANDING_EASE, delay: 0.2 }}
-            className="absolute right-0 top-5 hidden max-w-[245px] text-right text-[13px] leading-[1.65] text-[#777] xl:block font-body"
-          >
-            From everyday essentials to fashion-forward styles, we
-            manufacture apparel for every generation.
-          </motion.p>
+
         </div>
 
         {/* =====================================================
@@ -225,16 +215,7 @@ export default function RangeOfProducts() {
             </Link>
           </div>
 
-          {/* Right */}
-          <div className="hidden justify-self-end text-right lg:block">
-            <p className="text-[10px] font-bold uppercase leading-[1.45] tracking-[0.18em] text-[#858585] font-label">
-              QUALITY
-              <br />
-              APPAREL FOR A BRIGHTER
-              <br />
-              TOMORROW
-            </p>
-          </div>
+
         </motion.div>
       </div>
     </section>

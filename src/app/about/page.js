@@ -129,7 +129,7 @@ export default function AboutPage() {
       value: "Basic: 80,000 pcs/month\nFashion: 50,000 pcs/month",
       iconSrc: "/icons/production capacity.webp",
       iconAlt: "Production Capacity",
-      desc: "Garment manufacturing capability",
+      desc: "",
     },
     {
       label: "EXPERIENCE",
