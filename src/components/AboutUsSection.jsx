@@ -139,7 +139,7 @@ export default function AboutUsSection({ onOpenQuoteModal }) {
               transition={{ duration: 0.9, ease: GENTLE_LANDING_EASE, delay: 0.35 }}
               className="text-sm sm:text-base font-body text-[#555555] leading-relaxed w-full lg:max-w-[500px] text-left"
             >
-              <strong className="text-[#1A1A1A]">boCHE Apparels</strong>, part of <strong className="text-[#1A1A1A]">Boby Chemmanur International Group</strong>, is a prominent clothing manufacturing unit located in Tirupur, Tamil Nadu &amp; India. Specializing in high-quality apparel production, boCHE offers a wide range of garments including men’s, women’s, and children’s wear, along with custom designs and private label services.
+              <strong className="text-[#1A1A1A]">boCHE Apparels</strong>, part of <strong className="text-[#1A1A1A]">Boby Chemmanur International Group</strong>, is a prominent Apparel manufacturing unit located in Tirupur, India. Specializing in high-quality apparel production, we offers a wide range of garments including men’s, women’s, and children’s wear, along with custom designs and private label services.
             </motion.p>
 
             {/* Checklist 2x2 Grid - Slow & Smooth Slide UP One by One */}
