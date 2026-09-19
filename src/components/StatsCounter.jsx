@@ -27,10 +27,10 @@ export default function StatsCounter() {
     },
     {
       label: "PRODUCTION CAPACITY",
-      value: "1,300,000+ Pcs / Month",
+      value: "Basic: 80,000 pcs/month\nFashion: 50,000 pcs/month",
       iconSrc: "/icons/production capacity.webp",
       iconAlt: "Production Capacity",
-      desc: "Includes Basic & Fashion Garments",
+      desc: "Garment manufacturing capability",
     },
     {
       label: "EXPERIENCE",

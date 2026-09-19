@@ -10,7 +10,7 @@ export const COMPANY_INFO = {
     "boCHE Apparels was established in 2020 by Boby Chemmanur International Group, India (registered as Boby Chemmanur Enterprises Pvt Ltd). Right from the beginning, we emerged as an organization striving for quality and retaining consistency, offering complete apparel manufacturing solutions from fiber to fashion.",
   foundedYear: 2020,
   yearsExperience: "6+ Years of Experience",
-  annualCapacity: "1,300,000+ Pcs / Month (Basic & Fashion)",
+  annualCapacity: "Basic: 80,000 pcs/month | Fashion: 50,000 pcs/month",
   factoryArea: "15,000 Sq. Ft.",
   totalEmployees: "450+ Skilled Artisans & Technicians",
   onTimeDeliveryRate: "99.4%",
@@ -20,8 +20,8 @@ export const COMPANY_INFO = {
     { name: "100% Export Quality" },
   ],
   productionCapacity: {
-    total: "1,300,000+ pieces / month",
-    garmentTypes: "Basic & Fashion Garments",
+    basicGarments: "80,000 pieces/month",
+    fashionGarments: "50,000 pieces/month",
   },
   vision:
     "To continually grow as a producer of Men's wear, Women's wear, and Kids wear with emphasis on Quality, Integrity, Time, and Customer delight.",
