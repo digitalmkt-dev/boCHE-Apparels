@@ -117,18 +117,18 @@ export default function ContactPage() {
         }),
       });
 
-      const data = await res.json();
+      const data = await res.json().catch(() => ({}));
       if (res.ok && data.success) {
         setSubmitted(true);
       } else {
         if (data.errors) {
           setErrors((prev) => ({ ...prev, ...data.errors }));
         }
-        setErrorMessage(data.error || "Failed to send message. Please try again.");
+        setErrorMessage("We couldn’t send your enquiry. Please try again.");
       }
     } catch (err) {
-      console.error(err);
-      setErrorMessage("An error occurred while sending your message. Please try again.");
+      console.error("Enquiry submission error:", err);
+      setErrorMessage("We couldn’t send your enquiry. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -400,9 +400,13 @@ export default function ContactPage() {
                 </div>
 
                 {errorMessage && (
-                  <p className="text-xs text-red-600 font-bold bg-red-50 p-3 rounded-xl border border-red-200">
-                    {errorMessage}
-                  </p>
+                  <div
+                    role="alert"
+                    className="text-xs text-red-700 font-bold bg-red-50 p-3.5 rounded-xl border border-red-200 flex items-center gap-2 font-body"
+                  >
+                    <AlertCircle className="w-4 h-4 shrink-0 text-red-600" />
+                    <span>{errorMessage}</span>
+                  </div>
                 )}
 
                 {/* Submit message button */}

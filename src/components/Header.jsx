@@ -36,6 +36,9 @@ export default function Header({ onOpenQuoteModal }) {
     }
   }, [mobileMenuOpen]);
 
+  const knownBannerPages = ["/about", "/catalog", "/services", "/contact", "/sustainability", "/blog", "/products"];
+  const isBannerPage = knownBannerPages.includes(pathname);
+
   const navLinks = [
     { name: "HOME", href: "/" },
     { name: "ABOUT US", href: "/about" },
@@ -189,7 +192,7 @@ export default function Header({ onOpenQuoteModal }) {
            ========================================================================= */
         <div
           className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-400 ease-in-out ${
-            isScrolled
+            isScrolled || !isBannerPage
               ? "bg-[#1A1A1A] text-white border-b border-[#2A2A2A] shadow-xl py-4"
               : "bg-transparent text-white border-b border-white/10 py-5"
           }`}
