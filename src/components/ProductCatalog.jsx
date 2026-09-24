@@ -12,23 +12,23 @@ function ProductCatalogContent({ onOpenQuoteModal }) {
   const searchParams = useSearchParams();
   const categoryParam = searchParams ? searchParams.get("category") : null;
 
-  const [selectedTab, setSelectedTab] = useState("All Products");
+  const [selectedTab, setSelectedTab] = useState("Men's wear");
   const [visibleCount, setVisibleCount] = useState(12);
 
   useEffect(() => {
     if (categoryParam) {
       const lower = categoryParam.toLowerCase();
       if (lower.includes("women")) {
-        setSelectedTab("Women's Wear");
+        setSelectedTab("Women's wear");
       } else if (lower.includes("kid")) {
-        setSelectedTab("Kids Wear");
+        setSelectedTab("Kids wear");
       } else if (lower.includes("men")) {
-        setSelectedTab("Men's Wear");
+        setSelectedTab("Men's wear");
       }
     }
   }, [categoryParam]);
 
-  const tabs = ["All Products", "Men's Wear", "Women's Wear", "Kids Wear"];
+  const tabs = ["Men's wear", "Women's wear", "Kids wear"];
 
   // Men's Wear Catalog Data
   const mensProducts = [
@@ -277,10 +277,10 @@ function ProductCatalogContent({ onOpenQuoteModal }) {
   ];
 
   const getFilteredProducts = () => {
-    if (selectedTab === "Men's Wear") return mensProducts;
-    if (selectedTab === "Women's Wear") return womensProducts;
-    if (selectedTab === "Kids Wear") return kidsProducts;
-    return [...mensProducts, ...womensProducts, ...kidsProducts];
+    const lower = selectedTab.toLowerCase();
+    if (lower.includes("women")) return womensProducts;
+    if (lower.includes("kid")) return kidsProducts;
+    return mensProducts;
   };
 
   const allFiltered = getFilteredProducts();
@@ -387,42 +387,7 @@ function ProductCatalogContent({ onOpenQuoteModal }) {
           </motion.div>
         )}
 
-        {/* High-Impact Yellow CTA Banner */}
-        <motion.div
-          initial={{ opacity: 0, y: 35 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="bg-[#FBE87E] rounded-3xl p-8 sm:p-10 border border-[#E0D069] shadow-md my-12 relative overflow-hidden font-label"
-        >
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-6 relative z-10">
-            {/* Left Content */}
-            <div className="space-y-1 text-center lg:text-left">
-              <h3 className="text-2xl sm:text-3xl font-headline font-black text-[#1A1A1A] tracking-tight">
-                Have a Garment Style in Mind?
-              </h3>
-              <p className="text-sm font-body text-[#1A1A1A]/80 font-semibold">
-                Share your design or reference with our team.
-              </p>
-            </div>
 
-            {/* Desktop Vertical Divider */}
-            <div className="hidden lg:block w-[1px] h-12 bg-[#1A1A1A]/20 mx-2" />
-
-            {/* Right Button: Only Call Us Now */}
-            <div className="flex items-center justify-center w-full lg:w-auto">
-              <motion.a
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
-                href={`tel:${COMPANY_INFO.contact.phone}`}
-                className="btn-circle-hover-dark-white font-black px-8 py-4 rounded-full text-xs sm:text-sm tracking-wider uppercase inline-flex items-center gap-2.5 shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer justify-center"
-              >
-                <PhoneCall className="w-4 h-4" />
-                <span>CALL US NOW: {COMPANY_INFO.contact.phone}</span>
-              </motion.a>
-            </div>
-          </div>
-        </motion.div>
 
       </div>
     </section>

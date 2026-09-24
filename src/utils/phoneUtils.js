@@ -138,13 +138,27 @@ export function normalizePhoneInput(input, currentIso = "IN", currentDial = "+91
 /**
  * Validates full phone number against libphonenumber-js rules for current country.
  */
-export function validateCountryPhone(phoneDigits, countryCode, iso2) {
-  if (!phoneDigits) return "";
+export function validateCountryPhone(phoneDigits, iso2 = "IN", dialCode = "+91") {
+  if (!phoneDigits || typeof phoneDigits !== "string") return "Please enter your phone number.";
 
-  const normalized = normalizePhoneInput(phoneDigits, iso2, countryCode);
-  if (!normalized.isValid) {
-    return `Please enter a valid phone number for country code ${countryCode}.`;
+  const cleanDigits = phoneDigits.replace(/\D/g, "");
+  if (!cleanDigits) return "Please enter your phone number.";
+
+  const uppercaseIso = (iso2 || "IN").toUpperCase();
+  const matchedCountry = COUNTRY_LIST.find((c) => c.iso2 === uppercaseIso) || COUNTRY_LIST[0];
+  const targetDial = (dialCode && dialCode !== "+91" ? dialCode : matchedCountry.dialCode) || "+91";
+  const cleanDial = targetDial.replace(/\D/g, "");
+  const e164Str = `+${cleanDial}${cleanDigits}`;
+
+  const parsed = parsePhoneNumberFromString(e164Str, uppercaseIso);
+  if (parsed && parsed.isValid()) {
+    return "";
   }
 
-  return "";
+  // Fallback: Accept standard national phone numbers (7 to 15 digits)
+  if (cleanDigits.length >= 7 && cleanDigits.length <= 15) {
+    return "";
+  }
+
+  return "Please enter a valid phone number.";
 }

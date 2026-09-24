@@ -43,7 +43,7 @@ export default function SustainabilitySection() {
             </div>
 
             <h2 className="text-3xl sm:text-4xl font-headline font-extrabold text-[#1A1A1A] tracking-tight">
-              Ethical Garment Production & Environmental Stewardship
+              Ethical garment production & environmental stewardship
             </h2>
 
             <p className="text-[#555555] font-body text-sm sm:text-base leading-relaxed">

@@ -173,19 +173,7 @@ export default function QualityPolicySection() {
               ))}
             </div>
 
-            {/* Bottom Guarantee Commitment Line */}
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: GENTLE_LANDING_EASE, delay: 0.6 }}
-              className="pt-4 border-t border-[#E5E5E2]"
-            >
-              <p className="text-[10.5px] font-label font-bold uppercase tracking-[0.22em] text-[#777] flex items-center gap-2.5">
-                <span className="w-5 h-[2px] bg-[#FBE36B]" />
-                <span>Consistent Product Quality Throughout Garment Manufacturing</span>
-              </p>
-            </motion.div>
+
 
           </div>
 

@@ -5,7 +5,6 @@ import ProgressiveImage from "@/components/ProgressiveImage";
 import { motion } from "framer-motion";
 import { SERVICES } from "@/data/companyData";
 import PageHeaderBanner from "@/components/PageHeaderBanner";
-import { Check } from "lucide-react";
 
 const facilityImages = {
   knitting: "/images/service-knitting.webp",
@@ -24,8 +23,7 @@ export default function ServicesPage() {
     <div className="bg-[#F9F9F9] text-[#1A1A1A] min-h-screen pb-20">
       {/* Title Banner */}
       <PageHeaderBanner
-        title="Manufacturing Facilities"
-        subtitle="Complete apparel manufacturing support across Knitting, Dyeing, Printing, Embroidery, Sewing, Sampling, Merchandising, and Quality Control."
+        title="Facilities"
         breadcrumb="Facilities"
         bgImage="/images/facilties titile.webp"
       />
@@ -42,13 +40,6 @@ export default function ServicesPage() {
               : service.isAssociated
               ? "ASSOCIATED MANUFACTURING UNIT"
               : "IN-HOUSE FACILITY";
-
-            // Filter out feature items that duplicate the top badge name
-            const listFeatures = service.features.filter(
-              (feat) =>
-                !feat.toLowerCase().startsWith("associated ") &&
-                !feat.toLowerCase().includes("supplier facilities")
-            );
 
             return (
               <motion.div
@@ -86,23 +77,9 @@ export default function ServicesPage() {
                   </h2>
 
                   {/* Short Description */}
-                  <p className="text-xs sm:text-sm font-body text-[#555555] leading-relaxed mb-3">
+                  <p className="text-xs sm:text-sm font-body text-[#555555] leading-relaxed">
                     {service.shortDesc}
                   </p>
-
-                  {/* Specifications Checkmark List immediately below description */}
-                  <div className="space-y-2">
-                    {listFeatures.map((feat, idx) => (
-                      <div key={idx} className="flex items-start gap-2.5">
-                        <div className="w-4 h-4 rounded-full bg-[#FBE87E] text-[#1A1A1A] flex items-center justify-center shrink-0 mt-0.5 shadow-2xs">
-                          <Check className="w-2.5 h-2.5 text-[#1A1A1A] stroke-[3]" />
-                        </div>
-                        <span className="text-xs font-body text-[#1A1A1A] font-medium leading-snug">
-                          {feat}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
                 </div>
               </motion.div>
             );

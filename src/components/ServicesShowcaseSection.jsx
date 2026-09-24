@@ -11,6 +11,16 @@ export default function ServicesShowcaseSection() {
 
   const servicesData = [
     {
+      id: "sampling",
+      title: "Sampling",
+      image: "/images/sampling.webp",
+    },
+    {
+      id: "merchandising",
+      title: "Merchandising",
+      image: "/images/merchandising.webp",
+    },
+    {
       id: "knitting",
       title: "Knitting",
       image: "/images/service-knitting.webp",
@@ -18,7 +28,7 @@ export default function ServicesShowcaseSection() {
     },
     {
       id: "dyeing-fabric-processing",
-      title: "Dyeing & Fabric Processing",
+      title: "Fabric Processing",
       image: "/images/dying.webp",
       tag: "Associated Unit",
     },
@@ -32,22 +42,12 @@ export default function ServicesShowcaseSection() {
       id: "embroidery",
       title: "Embroidery",
       image: "/images/service-embroidery.webp",
-      tag: "Supplier Facility",
+      tag: "Associated Unit",
     },
     {
       id: "sewing-production",
-      title: "Sewing & Production",
+      title: "Production",
       image: "/images/sewing and production .webp",
-    },
-    {
-      id: "sampling",
-      title: "Sampling",
-      image: "/images/sampling.webp",
-    },
-    {
-      id: "merchandising",
-      title: "Merchandising",
-      image: "/images/merchandising.webp",
     },
     {
       id: "quality-control",

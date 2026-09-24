@@ -11,8 +11,8 @@ export default function HeroSection({ onOpenQuoteModal }) {
       image: "/images/hero-1.webp",
       mobileImage: "/images/hero-1-vert.webp",
       badge: "boCHE APPARELS",
-      title: "Complete Apparel Manufacturing",
-      highlight: "From Fiber to Fashion",
+      title: "Complete apparel manufacturing",
+      highlight: "From fiber to fashion",
       desc: "boCHE Apparels provides integrated apparel manufacturing support across supply chain management",
       mobileDesc: "boCHE Apparels provides integrated apparel manufacturing support across supply chain management",
       buttonText: "EXPLORE ABOUT US",
@@ -22,8 +22,8 @@ export default function HeroSection({ onOpenQuoteModal }) {
       image: "/images/hero-2.webp",
       mobileImage: "/images/hero-2-vert.webp",
       badge: "APPAREL MANUFACTURING EXPERTISE",
-      title: "Precision in Standards",
-      highlight: "Consistency in Every Garment",
+      title: "Precision in standards",
+      highlight: "Consistency in every garment",
       desc: "boCHE Apparels combines modern machinery, experienced technicians and dedicated production teams to deliver reliable garment manufacturing for men’s, women’s and kids wear.",
       mobileDesc: "boCHE Apparels combines modern machinery, experienced technicians and dedicated production teams to deliver reliable garment manufacturing for men’s, women’s and kids wear.",
       buttonText: "EXPLORE FACILITIES",
@@ -33,8 +33,8 @@ export default function HeroSection({ onOpenQuoteModal }) {
       image: "/images/hero-3.webp",
       mobileImage: "/images/hero-3-vert.webp",
       badge: "MEN • WOMEN • KIDS WEAR",
-      title: "Apparel for Every Generation",
-      highlight: "Made to Buyer Specification",
+      title: "Apparel for every generation",
+      highlight: "Made to buyer specification",
       desc: "From everyday garment to fashion styles, we manufacture with atmost care with support for customized designs, new patterns and buyer-specific requirements.",
       mobileDesc: "From everyday garments to fashion styles, we manufacture with atmost care with support for customized designs, new patterns and buyer-specific requirements.",
       buttonText: "VIEW PRODUCTS",
@@ -123,11 +123,7 @@ export default function HeroSection({ onOpenQuoteModal }) {
       {/* Content Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-30 w-full">
         <div key={currentSlide} className="max-w-3xl space-y-3 sm:space-y-3.5 md:space-y-5">
-          {/* Top Pill Badge */}
-          <div className="animate-hero-slide-down inline-flex items-center gap-2 bg-[#FBE87E] text-[#1A1A1A] border-none rounded-full px-3.5 py-1 sm:px-4 sm:py-1.5 text-[10px] sm:text-xs font-label font-black tracking-wider uppercase shadow-md">
-            <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#1A1A1A] animate-pulse" />
-            <span>{activeSlide.badge}</span>
-          </div>
+
 
           {/* Main Giant Headline (Fluid scaling for laptops and large displays) */}
           <h1 className="animate-hero-slide-down-delay text-2.5xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-headline font-black text-[#FFFFFF] tracking-tight leading-tight md:leading-[1.1] 2xl:leading-[1.08] [text-shadow:0_2px_10px_rgba(0,0,0,0.55)]">

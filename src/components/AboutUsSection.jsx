@@ -8,7 +8,7 @@ import { ArrowRight } from "lucide-react";
 import { COMPANY_INFO } from "@/data/companyData";
 
 export default function AboutUsSection({ onOpenQuoteModal }) {
-  const headlineText = "Trusted Apparel Manufacturer in Tirupur, India";
+  const headlineText = "Trusted apparel manufacturer in Tirupur, India";
   const words = headlineText.split(" ");
 
   const highlights = [
@@ -23,7 +23,7 @@ export default function AboutUsSection({ onOpenQuoteModal }) {
       iconSrc: "/icons/customized garment manufacturing.webp",
       iconAlt: "Customized Garment Manufacturing",
       title: "Customized Garment Manufacturing",
-      desc: "Inovative new product development and deliverign coustomer specifications across mutiple garment categories. ",
+      desc: "Innovative new product development and delivering customer specifications across multiple garment categories.",
     },
     {
       iconSrc: "/icons/integrated apparel production.webp",
@@ -139,7 +139,7 @@ export default function AboutUsSection({ onOpenQuoteModal }) {
               transition={{ duration: 0.9, ease: GENTLE_LANDING_EASE, delay: 0.35 }}
               className="text-sm sm:text-base font-body text-[#555555] leading-relaxed w-full lg:max-w-[500px] text-left"
             >
-              <strong className="text-[#1A1A1A]">boCHE Apparels</strong>, part of <strong className="text-[#1A1A1A]">Boby Chemmanur International Group</strong>, is a prominent Apparel manufacturing unit located in Tirupur, India. Specializing in high-quality apparel production, we offers a wide range of garments including men’s, women’s, and children’s wear, along with custom designs and private label services.
+              <strong className="text-[#1A1A1A]">boCHE Apparels</strong>, part of <strong className="text-[#1A1A1A]">Boby Chemmanur International Group</strong> (registered as <strong className="text-[#1A1A1A]">Boby Chemmanur Enterprises Pvt Ltd</strong>), is a prominent Apparel manufacturing unit located in Tirupur, India. Specializing in high-quality apparel production, we offer a wide range of garments including men’s, women’s, and children’s wear, along with custom designs and private label services.
             </motion.p>
 
             {/* Checklist 2x2 Grid - Slow & Smooth Slide UP One by One */}

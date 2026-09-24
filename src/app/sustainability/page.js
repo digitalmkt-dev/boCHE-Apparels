@@ -43,7 +43,7 @@ export default function SustainabilityPage() {
             </div>
 
             <h2 className="text-2xl sm:text-3xl font-headline font-extrabold text-[#1A1A1A]">
-              Ethical Labor & Fair Wages Policy
+              Ethical labor & fair wages policy
             </h2>
 
             <p className="text-[#555555] font-body text-sm leading-relaxed">

@@ -16,6 +16,7 @@ export default function PhoneInputWithCountry({
   countryCode = "+91",
   countryIso = "IN",
   onChange,
+  onCountryChange,
   onBlur,
   error,
   touched,
@@ -66,38 +67,22 @@ export default function PhoneInputWithCountry({
     );
   });
 
+  const safeValue = typeof value === "string" ? value : (value && typeof value === "object" && typeof value.value === "string" ? value.value : "");
+
   const handleSelectCountry = (country) => {
     setIsOpen(false);
     setSearch("");
 
+    if (onCountryChange) {
+      onCountryChange(country.iso2);
+    }
+
     const newMaxDigits = getCountryMaxPhoneLength(country.iso2, country.dialCode);
-    const currentDigitsOnly = (value || "").replace(/\D/g, "");
+    const currentDigitsOnly = safeValue.replace(/\D/g, "");
     const truncatedValue = currentDigitsOnly.slice(0, newMaxDigits);
 
-    if (onChange) {
-      // Pass both countryIso and countryCode updates
-      onChange({
-        target: {
-          name: "countryIso",
-          value: country.iso2,
-        },
-      });
-      onChange({
-        target: {
-          name: "countryCode",
-          value: country.dialCode,
-        },
-      });
-
-      // Update phone value if truncated to fit new country limit
-      if (truncatedValue !== value) {
-        onChange({
-          target: {
-            name,
-            value: truncatedValue,
-          },
-        });
-      }
+    if (onChange && truncatedValue !== safeValue) {
+      onChange(truncatedValue);
     }
   };
 
@@ -113,14 +98,10 @@ export default function PhoneInputWithCountry({
   };
 
   const handlePhoneChange = (e) => {
-    const restrictedDigits = processDigits(e.target.value);
+    const rawInput = e && e.target ? e.target.value : String(e || "");
+    const restrictedDigits = processDigits(rawInput);
     if (onChange) {
-      onChange({
-        target: {
-          name,
-          value: restrictedDigits,
-        },
-      });
+      onChange(restrictedDigits);
     }
   };
 
@@ -131,34 +112,17 @@ export default function PhoneInputWithCountry({
     // Support international pasted numbers starting with '+'
     const normalized = normalizePhoneInput(pastedText, selectedCountry.iso2, selectedCountry.dialCode);
 
-    if (onChange) {
-      if (pastedText.trim().startsWith("+") && normalized.iso) {
-        onChange({
-          target: {
-            name: "countryIso",
-            value: normalized.iso,
-          },
-        });
-        onChange({
-          target: {
-            name: "countryCode",
-            value: normalized.dial,
-          },
-        });
-        onChange({
-          target: {
-            name,
-            value: normalized.phone.slice(0, getCountryMaxPhoneLength(normalized.iso, normalized.dial)),
-          },
-        });
-      } else {
-        const digitsOnly = pastedText.replace(/\D/g, "");
-        onChange({
-          target: {
-            name,
-            value: digitsOnly.slice(0, maxAllowedDigits),
-          },
-        });
+    if (pastedText.trim().startsWith("+") && normalized.iso) {
+      if (onCountryChange) {
+        onCountryChange(normalized.iso);
+      }
+      if (onChange) {
+        onChange(normalized.phone.slice(0, getCountryMaxPhoneLength(normalized.iso, normalized.dial)));
+      }
+    } else {
+      const digitsOnly = pastedText.replace(/\D/g, "");
+      if (onChange) {
+        onChange(digitsOnly.slice(0, maxAllowedDigits));
       }
     }
   };
@@ -191,7 +155,7 @@ export default function PhoneInputWithCountry({
             name={name}
             maxLength={maxAllowedDigits}
             placeholder={placeholder}
-            value={value}
+            value={safeValue}
             onChange={handlePhoneChange}
             onPaste={handlePaste}
             onBlur={onBlur}

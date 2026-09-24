@@ -35,7 +35,7 @@ export const COMPANY_INFO = {
     phone: "+91 6235 000 902",
     hotline: "+91 6235 000 902",
     address:
-      "Boby Chemmanur Enterprises Pvt Ltd, No. 10, Poonthottam, Murugampalayam, Kumar Nagar Extn, Tirupur, Tamil Nadu - 641603, India",
+      "Boby Chemmanur Enterprises Pvt Ltd, No. 10, Poonthottam, Murugampalayam, Kumar Nagar Extn, Tirupur - 641603, India",
     workingHours: "Monday - Saturday: 9:00 AM - 6:00 PM IST",
     coordinates: { lat: 11.116383290607224, lng: 77.32746780022696 },
     mapEmbedUrl:
@@ -46,25 +46,53 @@ export const COMPANY_INFO = {
 export const PRODUCT_CATEGORIES = [
   {
     id: "kids-wear",
-    name: "Kids Wear",
+    name: "Kids wear",
     description:
       "Kids co-ord sets, top & bottom sets, printed kids sets, long-sleeve tops, sleeveless garments, tank tops, baby/toddler garments, kids T-shirts, and polo-style garments.",
   },
   {
     id: "ladies-wear",
-    name: "Ladies / Women's Wear",
+    name: "Ladies / women's wear",
     description:
       "Leggings, skirts, dresses, T-shirts, tops, sleeveless tops, jackets, and fashion dresses.",
   },
   {
     id: "mens-wear",
-    name: "Men's Wear",
+    name: "Men's wear",
     description:
       "Polo T-shirts, regular T-shirts, sports/performance-style T-shirts, printed T-shirts, branded T-shirts, hoodies, long-sleeve T-shirts, and gradient/fashion T-shirts.",
   },
 ];
 
 export const SERVICES = [
+  {
+    id: "sampling",
+    title: "Sampling",
+    cardTitle: "Sampling",
+    icon: "Scissors",
+    shortDesc: "Dedicated sampling support for product development, new patterns and buyer-specific garment requirement.",
+    description: "Dedicated sampling support for garment development and buyer requirements.",
+    isAssociated: false,
+    features: [
+      "Separate Sampling department",
+      "Buyer specifications accepted",
+      "Regular development of new patterns"
+    ],
+  },
+  {
+    id: "merchandising",
+    title: "Merchandising",
+    cardTitle: "Merchandising",
+    icon: "Shirt",
+    shortDesc: "Dedicated merchandising team bridging between buyer and production.",
+    description: "Dedicated merchandising support for coordinating buyer requirements and garment production.",
+    isAssociated: false,
+    features: [
+      "Separate Merchandising department",
+      "Buyer specifications accepted",
+      "Supports complete garment manufacturing operations"
+    ],
+  },
   {
     id: "knitting",
     title: "Knitting",
@@ -80,13 +108,13 @@ export const SERVICES = [
       "Approximate knitting capacity: 3,000 kg/day",
       "Supports various qualities of jersey",
       "Supports 4-track design fabrics",
-      "Lycra-related fabric capability"
+      "Lycra fabric capability"
     ],
   },
   {
     id: "dyeing-fabric-processing",
-    title: "Dyeing & Fabric Processing",
-    cardTitle: "Dyeing & Fabric Processing",
+    title: "Fabric Processing",
+    cardTitle: "Fabric Processing",
     icon: "Layers",
     shortDesc: "Associated fabric-processing capabilities supported by imported dyeing, squeezing and air-relax drying equipment.",
     description: "Fabric-processing support through an associated unit equipped with imported dyeing and finishing machinery.",
@@ -104,13 +132,13 @@ export const SERVICES = [
     title: "Printing",
     cardTitle: "Printing",
     icon: "Printer",
-    shortDesc: "Printing support through an associated unit equipped with imported M&R machinery from the USA.",
+    shortDesc: "Printing support through an associated unit equipped with table printing and M&R machinery.",
     description: "Garment printing support through an associated printing facility.",
     isAssociated: true,
     associatedNote: "Associated Printing Unit",
     features: [
       "Associated printing unit",
-      "Equipped with an imported M&R machine from the USA"
+      
     ],
   },
   {
@@ -121,7 +149,7 @@ export const SERVICES = [
     shortDesc: "Computerized embroidery support using 20-head TAJIMA machines with design punching and laser support.",
     description: "Computerized embroidery support for customized garment designs.",
     isAssociated: true,
-    associatedNote: "Embroidery Supplier Facilities",
+    associatedNote: "Associated Embroidery Unit",
     features: [
       "Embroidery supplier equipped with 4 computerized machines",
       "20-head TAJIMA embroidery machines from Japan",
@@ -131,44 +159,16 @@ export const SERVICES = [
   },
   {
     id: "sewing-production",
-    title: "Sewing & Production",
-    cardTitle: "Sewing & Production",
+    title: "Production",
+    cardTitle: "Production",
     icon: "Cpu",
     shortDesc: "Garment production supported by industrial sewing machinery from SIRUBA, JUKI and BROTHER and experienced technicians.",
-    description: "Garment sewing and production supported by established industrial sewing-machine brands and experienced technicians.",
+    description: "Garment production supported by established industrial sewing-machine brands and experienced technicians.",
     isAssociated: false,
     features: [
       "Industrial sewing machinery from SIRUBA, JUKI, and BROTHER",
       "Experienced technicians",
       "Separate production department"
-    ],
-  },
-  {
-    id: "sampling",
-    title: "Sampling",
-    cardTitle: "Sampling",
-    icon: "Scissors",
-    shortDesc: "Dedicated sampling support for product development, new patterns and buyer-specific garment requirements.",
-    description: "Dedicated sampling support for garment development and buyer requirements.",
-    isAssociated: false,
-    features: [
-      "Separate Sampling department",
-      "Buyer specifications accepted",
-      "Regular development of new patterns"
-    ],
-  },
-  {
-    id: "merchandising",
-    title: "Merchandising",
-    cardTitle: "Merchandising",
-    icon: "Shirt",
-    shortDesc: "Dedicated merchandising support for buyer requirements, product coordination and garment manufacturing.",
-    description: "Dedicated merchandising support for coordinating buyer requirements and garment production.",
-    isAssociated: false,
-    features: [
-      "Separate Merchandising department",
-      "Buyer specifications accepted",
-      "Supports complete garment manufacturing operations"
     ],
   },
   {
@@ -192,7 +192,7 @@ export const FEATURED_PRODUCTS = [
   {
     id: "mens-polo",
     name: "Men's Classic Polo T-Shirt",
-    category: "Men's Wear",
+    category: "Men's wear",
     fabric: "Jersey & Pique Knits",
     image: "/images/hero-factory.webp",
     description: "Export-quality polo T-shirt crafted with precision stitching, custom collar construction, and fade-resistant dyeing.",
@@ -201,7 +201,7 @@ export const FEATURED_PRODUCTS = [
   {
     id: "kids-coord",
     name: "Kids Co-Ord & Top Set",
-    category: "Kids Wear",
+    category: "Kids wear",
     fabric: "Soft Cotton Jersey",
     image: "/images/fabric-sourcing.webp",
     description: "Vibrant and comfortable printed kids set designed for durability, freedom of movement, and skin-friendly comfort.",
@@ -210,7 +210,7 @@ export const FEATURED_PRODUCTS = [
   {
     id: "ladies-dress",
     name: "Ladies Fashion Dress & Top",
-    category: "Ladies Wear",
+    category: "Ladies wear",
     fabric: "Lycra & Jersey Blends",
     image: "/images/activewear.webp",
     description: "Elegant ladies fashion dress tailored with precise silhouette fitting and high-grade fabric finishing.",
@@ -235,25 +235,25 @@ export const TESTIMONIALS = [
 
 export const SUSTAINABILITY_PILLARS = [
   {
-    title: "Quality & Consistency",
+    title: "Quality & consistency",
     description: "Striving for uncompromised product quality, regular review of quality objectives, and precise buyer specification fulfillment.",
     stat: "100%",
     badge: "Quality First",
   },
   {
-    title: "15,000 Sq. Ft. Facility",
+    title: "15,000 sq. ft. facility",
     description: "Structured manufacturing area with dedicated departments for sampling, merchandising, production, and quality control.",
     stat: "15k Sq Ft",
     badge: "Factory Scale",
   },
   {
-    title: "Associated Processing & Printing",
+    title: "Associated processing & printing",
     description: "State-of-the-art associated dyeing unit with Hong Kong machinery and M&R USA printing technology.",
     stat: "M&R USA",
     badge: "Technology",
   },
   {
-    title: "6 Years Experience",
+    title: "6 years experience",
     description: "Established in 2020 under Boby Chemmanur International Group, India with constant growth in competitive markets.",
     stat: "2020",
     badge: "Established",

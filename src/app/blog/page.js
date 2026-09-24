@@ -21,7 +21,7 @@ export default function BlogPage() {
   const posts = [
     {
       id: 1,
-      title: "Understanding Sustainable Fiber Selection for 2026 Activewear",
+      title: "Understanding sustainable fiber selection for 2026 activewear",
       category: "Sustainability & Materials",
       date: "August 18, 2026",
       author: "Technical Merchandising Team",
@@ -31,7 +31,7 @@ export default function BlogPage() {
     },
     {
       id: 2,
-      title: "3D CAD Pattern Design & Rapid Prototype Execution",
+      title: "3D CAD pattern design & rapid prototype execution",
       category: "Garment Engineering",
       date: "July 24, 2026",
       author: "CAD CAD Team",
@@ -41,7 +41,7 @@ export default function BlogPage() {
     },
     {
       id: 3,
-      title: "Navigating Minimum Order Quantities (MOQ) for Fashion Startups",
+      title: "Navigating minimum order quantities (MOQ) for fashion startups",
       category: "Manufacturing Guide",
       date: "June 12, 2026",
       author: "Production Merchandiser",

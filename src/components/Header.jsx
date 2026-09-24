@@ -41,7 +41,6 @@ export default function Header({ onOpenQuoteModal }) {
     { name: "ABOUT US", href: "/about" },
     { name: "PRODUCTS", href: "/catalog" },
     { name: "FACILITIES", href: "/services" },
-    { name: "CLIENTS", href: "/clients" },
     { name: "CONTACT", href: "/contact" },
   ];
 

@@ -135,7 +135,7 @@ export default function RangeOfProducts() {
             {/* KIDS text */}
             <span
               className="pointer-events-none absolute left-full top-1/2 z-0 ml-1.5 xl:ml-2 2xl:ml-3 -translate-y-1/2 whitespace-nowrap text-[48px] xl:text-[62px] 2xl:text-[88px] font-black leading-none tracking-[0.04em] text-[#171717]/[0.08]"
-              style={{ writingMode: "vertical-rl" }}
+              style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
             >
               KIDS
             </span>
@@ -193,16 +193,8 @@ export default function RangeOfProducts() {
           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: GENTLE_LANDING_EASE, delay: 0.4 }}
-          className="relative mt-12 pt-6 lg:mt-20 lg:pt-8 lg:border-t lg:border-[#DEDEDB] lg:grid lg:grid-cols-[1fr_auto_1fr] lg:items-center"
+          className="relative mt-12 pt-6 lg:mt-20 lg:pt-8 lg:border-t lg:border-[#DEDEDB] flex justify-center items-center"
         >
-          {/* Left */}
-          <div className="hidden items-center gap-4 lg:flex">
-            <span className="h-px w-7 bg-black/30" />
-
-            <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#777] font-label">
-              FABRIC • FASHION • MANUFACTURING
-            </p>
-          </div>
 
           {/* Button */}
           <div className="flex justify-center">

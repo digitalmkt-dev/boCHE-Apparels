@@ -27,10 +27,10 @@ export default function CapabilitiesGrid({ onOpenQuoteModal }) {
             <span>INTEGRATED APPAREL MANUFACTURING CAPABILITIES</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-headline font-extrabold text-[#1A1A1A] tracking-tight">
-            Complete Apparel Manufacturing Services
+            Complete apparel manufacturing services
           </h2>
           <p className="text-[#555555] font-body text-base leading-relaxed">
-            boCHE Apparels provides complete garment manufacturing support across Knitting, Dyeing & Fabric Processing, Printing, Embroidery, Sewing & Garment Production, Sampling, Merchandising, and Quality Control for Men's, Women's, and Kids Wear.
+            boCHE Apparels provides complete garment manufacturing support across Sampling, Merchandising, Knitting, Fabric Processing, Printing, Embroidery, Production, and Quality Control for Men's, Women's, and Kids Wear.
           </p>
         </div>
 

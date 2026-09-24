@@ -19,8 +19,7 @@ export default function CatalogPage() {
     <div className="bg-[#F9F9F9] text-[#1A1A1A] min-h-screen">
       {/* Header Banner */}
       <PageHeaderBanner
-        title="Apparel Products Catalog"
-        subtitle="Explore sample garment designs manufactured across our specialized production lines. Custom GSM, colors, and branding available."
+        title="Products"
         breadcrumb="Products"
         bgImage="/images/product_titile.webp"
       />

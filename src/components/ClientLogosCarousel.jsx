@@ -62,17 +62,10 @@ export default function ClientLogosCarousel() {
             viewport={{ once: true }}
             className="text-2xl sm:text-3xl lg:text-4xl font-headline font-black text-[#1A1A1A] tracking-tight leading-tight"
           >
-            Brands We Have Collaborated With
+            Brands we have collaborated with
           </motion.h2>
 
-          <motion.p
-            initial={{ opacity: 0, y: -10, filter: "blur(3px)" }}
-            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            viewport={{ once: true }}
-            className="text-[11px] sm:text-xs font-label font-bold text-[#555555] uppercase tracking-[0.25em] block"
-          >
-            GLOBAL & DOMESTIC BRANDS
-          </motion.p>
+
         </div>
 
         {/* Carousel Container */}

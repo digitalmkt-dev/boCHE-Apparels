@@ -81,25 +81,7 @@ export default function Footer() {
                 unoptimized
                 className="h-14 sm:h-14 md:h-12 lg:h-12 w-auto object-contain" />
 
-              <span
-                className="
-                  mt-2
-                  block
 
-                  font-label
-                  text-[8px]
-                  uppercase
-                  tracking-[0.18em]
-
-                  text-slate-400
-
-                  sm:text-[8.5px]
-                  md:text-[9px]
-                  lg:text-[10px]
-                "
-              >
-                Industrial Craft Garment Unit
-              </span>
             </Link>
 
             <p
@@ -284,14 +266,7 @@ export default function Footer() {
                 </Link>
               </li>
 
-              <li>
-                <Link
-                  href="/clients"
-                  className="transition-colors hover:text-[#FBE87E]"
-                >
-                  Clients
-                </Link>
-              </li>
+
 
               <li>
                 <Link
@@ -396,7 +371,7 @@ export default function Footer() {
 
                   No. 10, Poonthottam, Murugampalayam,
                   <br />
-                  Kumar Nagar Extn, Tirupur, Tamil Nadu – 641603, India
+                  Kumar Nagar Extn, Tirupur – 641603, India
                 </span>
               </li>
 
