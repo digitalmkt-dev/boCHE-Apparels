@@ -5,19 +5,19 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://bocheapparels.com";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
-  title: "boCHE Apparels | Industrial Craft Garment Manufacturing Unit",
+  title: "boCHE Apparels | Industrial Apparel Manufacturing Unit",
   description:
-    "boCHE Apparels is a premier full-service garment manufacturing unit delivering end-to-end apparel OEM/ODM solutions, activewear, corporate uniforms, and sustainable clothing for global brands.",
+    "Prominent apparel manufacturing unit located in Tirupur, India. Specializing in high-quality apparel production, offering a wide range of garments including men’s, women’s, and children’s wear.",
   keywords: [
     "boCHE Apparels",
     "Garment Manufacturer",
     "Apparel OEM ODM",
-    "Activewear Manufacturing",
-    "Industrial Craft",
+    "Industrial Apparel Manufacturing Unit",
+    "Tirupur Garment Manufacturer",
     "T-shirt Manufacturer",
-    "Corporate Uniforms Manufacturer",
-    "WRAP Gold Certified Factory",
-    "Organic Cotton Garment Facility",
+    "Men's Wear Manufacturer",
+    "Women's Wear Manufacturer",
+    "Children's Wear Manufacturer",
   ],
   authors: [{ name: "boCHE Apparels" }],
   icons: {
@@ -26,9 +26,9 @@ export const metadata = {
     apple: "/favicon.webp",
   },
   openGraph: {
-    title: "boCHE Apparels | Industrial Craft Garment Manufacturing Unit",
+    title: "boCHE Apparels | Industrial Apparel Manufacturing Unit",
     description:
-      "Premier full-service garment manufacturing unit delivering end-to-end apparel OEM/ODM solutions, activewear, corporate uniforms, and sustainable clothing.",
+      "Prominent apparel manufacturing unit located in Tirupur, India. Specializing in high-quality apparel production, offering a wide range of garments including men’s, women’s, and children’s wear.",
     url: siteUrl,
     siteName: "boCHE Apparels",
     locale: "en_US",
@@ -38,15 +38,15 @@ export const metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "boCHE Apparels Logo & Industrial Craft Unit",
+        alt: "boCHE Apparels | Industrial Apparel Manufacturing Unit",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "boCHE Apparels | Industrial Craft Garment Manufacturing Unit",
+    title: "boCHE Apparels | Industrial Apparel Manufacturing Unit",
     description:
-      "Premier full-service garment manufacturing unit delivering end-to-end apparel OEM/ODM solutions.",
+      "Prominent apparel manufacturing unit located in Tirupur, India. Specializing in high-quality apparel production, offering a wide range of garments including men’s, women’s, and children’s wear.",
     images: ["/og-image.png"],
   },
 };
@@ -67,7 +67,7 @@ export default function RootLayout({ children }) {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:alt" content="boCHE Apparels Logo & Industrial Craft Unit" />
+        <meta property="og:image:alt" content="boCHE Apparels | Industrial Apparel Manufacturing Unit" />
         <meta name="twitter:image" content={`${siteUrl}/og-image.png`} />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
