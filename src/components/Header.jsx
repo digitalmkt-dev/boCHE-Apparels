@@ -56,22 +56,22 @@ export default function Header({ onOpenQuoteModal }) {
         <>
           {/* 1. FLOATING PILL HEADER (Top of Home Page) */}
           <div
-            className={`fixed top-0 left-0 right-0 z-50 flex justify-center px-4 sm:px-8 transition-all duration-300 ease-in-out ${
+            className={`fixed top-0 left-0 right-0 z-50 flex justify-center px-3 sm:px-8 transition-all duration-300 ease-in-out ${
               isScrolled
                 ? "-translate-y-full opacity-0 pointer-events-none"
                 : "translate-y-0 opacity-100 pointer-events-auto"
             }`}
           >
-            <div className="w-full max-w-7xl rounded-full bg-white/95 backdrop-blur-md border border-[#E5E5E2] shadow-2xl py-3.5 sm:py-5 px-5 sm:px-10 mt-3 sm:mt-5 flex items-center justify-between">
+            <div className="w-full max-w-7xl rounded-full bg-white/95 backdrop-blur-md border border-[#E5E5E2] shadow-2xl py-2 sm:py-3.5 md:py-5 px-3.5 sm:px-6 md:px-10 mt-2 sm:mt-4 md:mt-5 flex items-center justify-between">
               {/* Logo */}
-              <Link href="/" className="flex items-center gap-3 group">
+              <Link href="/" className="flex items-center gap-2 sm:gap-3 group">
                 <Image
                   src="/logo/bocheapprels.webp"
                   alt="boCHE Apparels Logo"
                   width={220}
                   height={60}
                   unoptimized
-                  className="h-14 sm:h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                  className="h-8 sm:h-11 md:h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
                   priority />
               </Link>
 
@@ -99,7 +99,7 @@ export default function Header({ onOpenQuoteModal }) {
               </nav>
 
               {/* Right Actions */}
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2 sm:gap-4">
                 <a
                   href="/documents/COMPANY PROFILE.pdf"
                   target="_blank"
@@ -112,10 +112,10 @@ export default function Header({ onOpenQuoteModal }) {
 
                 <button
                   onClick={() => setMobileMenuOpen(true)}
-                  className="lg:hidden p-2.5 text-[#1A1A1A] hover:bg-[#EAEAEA] rounded-full transition-colors border-none cursor-pointer"
+                  className="lg:hidden p-1.5 sm:p-2.5 text-[#1A1A1A] hover:bg-[#EAEAEA] rounded-full transition-colors border-none cursor-pointer"
                   aria-label="Open menu"
                 >
-                  <Menu className="w-7 h-7" />
+                  <Menu className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />
                 </button>
               </div>
             </div>
@@ -129,15 +129,15 @@ export default function Header({ onOpenQuoteModal }) {
                 : "-translate-y-full opacity-0 pointer-events-none"
             }`}
           >
-            <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
-              <Link href="/" className="flex items-center gap-3 group">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-2.5 sm:py-3.5 md:py-4 flex items-center justify-between">
+              <Link href="/" className="flex items-center gap-2 sm:gap-3 group">
                 <Image
                   src="/logo/bocheapprels.webp"
                   alt="boCHE Apparels Logo"
                   width={200}
                   height={54}
                   unoptimized
-                  className="h-13 sm:h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                  className="h-8 sm:h-10 md:h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
                   priority />
               </Link>
 
@@ -163,7 +163,7 @@ export default function Header({ onOpenQuoteModal }) {
                 })}
               </nav>
 
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2 sm:gap-4">
                 <a
                   href="/documents/COMPANY PROFILE.pdf"
                   target="_blank"
@@ -176,10 +176,10 @@ export default function Header({ onOpenQuoteModal }) {
 
                 <button
                   onClick={() => setMobileMenuOpen(true)}
-                  className="lg:hidden p-2.5 text-[#1A1A1A] hover:bg-[#EAEAEA] rounded-full transition-colors border-none cursor-pointer"
+                  className="lg:hidden p-1.5 sm:p-2.5 text-[#1A1A1A] hover:bg-[#EAEAEA] rounded-full transition-colors border-none cursor-pointer"
                   aria-label="Open menu"
                 >
-                  <Menu className="w-7 h-7" />
+                  <Menu className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />
                 </button>
               </div>
             </div>
@@ -193,20 +193,20 @@ export default function Header({ onOpenQuoteModal }) {
         <div
           className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-400 ease-in-out ${
             isScrolled || !isBannerPage
-              ? "bg-[#1A1A1A] text-white border-b border-[#2A2A2A] shadow-xl py-4"
-              : "bg-transparent text-white border-b border-white/10 py-5"
+              ? "bg-[#1A1A1A] text-white border-b border-[#2A2A2A] shadow-xl py-2.5 sm:py-3.5 md:py-4"
+              : "bg-transparent text-white border-b border-white/10 py-3 sm:py-4 md:py-5"
           }`}
         >
-          <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex items-center justify-between">
             {/* Brand Logo */}
-            <Link href="/" className="flex items-center gap-3 group">
+            <Link href="/" className="flex items-center gap-2 sm:gap-3 group">
               <Image
                 src="/logo/bocheapprels2.webp"
                 alt="boCHE Apparels Logo"
                 width={200}
                 height={54}
                 unoptimized
-                className="h-13 sm:h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                className="h-8 sm:h-10 md:h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
                 priority />
             </Link>
 
@@ -235,7 +235,7 @@ export default function Header({ onOpenQuoteModal }) {
             </nav>
 
             {/* Right Action Button */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 sm:gap-4">
               <a
                 href="/documents/COMPANY PROFILE.pdf"
                 target="_blank"
@@ -248,10 +248,10 @@ export default function Header({ onOpenQuoteModal }) {
 
               <button
                 onClick={() => setMobileMenuOpen(true)}
-                className="lg:hidden p-2.5 text-white hover:bg-white/10 rounded-full transition-colors border-none cursor-pointer"
+                className="lg:hidden p-1.5 sm:p-2.5 text-white hover:bg-white/10 rounded-full transition-colors border-none cursor-pointer"
                 aria-label="Open menu"
               >
-                <Menu className="w-7 h-7" />
+                <Menu className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />
               </button>
             </div>
           </div>
