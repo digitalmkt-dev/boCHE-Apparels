@@ -369,9 +369,11 @@ export default function Footer() {
                     Address:
                   </strong>
 
-                  No. 10, Poonthottam, Murugampalayam,
+                  Boby Chemmanur Enterprises Pvt Ltd
                   <br />
-                  Kumar Nagar Extn, Tirupur – 641603, India
+                  No 10, Poonthottam, Murugampalayam Extn,
+                  <br />
+                  Kumarnagar, Tirupur, India - 641603
                 </span>
               </li>
 

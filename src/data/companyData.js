@@ -35,7 +35,7 @@ export const COMPANY_INFO = {
     phone: "+91 6235 000 902",
     hotline: "+91 6235 000 902",
     address:
-      "Boby Chemmanur Enterprises Pvt Ltd, No. 10, Poonthottam, Murugampalayam, Kumar Nagar Extn, Tirupur - 641603, India",
+      "Boby Chemmanur Enterprises Pvt Ltd, No 10, Poonthottam, Murugampalayam Extn, Kumarnagar, Tirupur, India - 641603",
     workingHours: "Monday - Saturday: 9:00 AM - 6:00 PM IST",
     coordinates: { lat: 11.116383290607224, lng: 77.32746780022696 },
     mapEmbedUrl:
@@ -66,20 +66,6 @@ export const PRODUCT_CATEGORIES = [
 
 export const SERVICES = [
   {
-    id: "sampling",
-    title: "Sampling",
-    cardTitle: "Sampling",
-    icon: "Scissors",
-    shortDesc: "Dedicated sampling support for product development, new patterns and buyer-specific garment requirement.",
-    description: "Dedicated sampling support for garment development and buyer requirements.",
-    isAssociated: false,
-    features: [
-      "Separate Sampling department",
-      "Buyer specifications accepted",
-      "Regular development of new patterns"
-    ],
-  },
-  {
     id: "merchandising",
     title: "Merchandising",
     cardTitle: "Merchandising",
@@ -91,6 +77,20 @@ export const SERVICES = [
       "Separate Merchandising department",
       "Buyer specifications accepted",
       "Supports complete garment manufacturing operations"
+    ],
+  },
+  {
+    id: "sampling",
+    title: "Sampling",
+    cardTitle: "Sampling",
+    icon: "Scissors",
+    shortDesc: "Dedicated sampling support for product development, new patterns and buyer-specific garment requirement.",
+    description: "Dedicated sampling support for garment development and buyer requirements.",
+    isAssociated: false,
+    features: [
+      "Separate Sampling department",
+      "Buyer specifications accepted",
+      "Regular development of new patterns"
     ],
   },
   {

@@ -11,14 +11,14 @@ export default function ServicesShowcaseSection() {
 
   const servicesData = [
     {
-      id: "sampling",
-      title: "Sampling",
-      image: "/images/sampling.webp",
-    },
-    {
       id: "merchandising",
       title: "Merchandising",
       image: "/images/merchandising.webp",
+    },
+    {
+      id: "sampling",
+      title: "Sampling",
+      image: "/images/sampling.webp",
     },
     {
       id: "knitting",
@@ -41,7 +41,7 @@ export default function ServicesShowcaseSection() {
     {
       id: "embroidery",
       title: "Embroidery",
-      image: "/images/service-embroidery.webp",
+      image: "/images/service-embroidery-facility.webp",
       tag: "Associated Unit",
     },
     {
@@ -52,7 +52,7 @@ export default function ServicesShowcaseSection() {
     {
       id: "quality-control",
       title: "Quality Control",
-      image: "/images/quality control.webp",
+      image: "/images/service-quality-control.webp",
     },
   ];
 

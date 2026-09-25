@@ -42,7 +42,7 @@ export default function SustainabilitySection() {
               <span>SUSTAINABLE APPAREL ENGINEERING</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl font-headline font-extrabold text-[#1A1A1A] tracking-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[40px] font-headline font-black tracking-tight text-[#171717] leading-tight">
               Ethical garment production & environmental stewardship
             </h2>
 

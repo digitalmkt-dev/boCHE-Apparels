@@ -189,20 +189,6 @@ export default function AboutPage() {
 
   const manufacturingCapabilities = [
     {
-      id: "sampling",
-      title: "Sampling",
-      subtitle: "Product Development",
-      iconSrc: "/icons/sampling.webp",
-      iconAlt: "Sampling",
-      highlight: "Rapid Prototyping & CAD Patterns",
-      description: "A dedicated sampling department supports buyer specifications, customized garment requirements, and rapid turnaround for pre-production approval:",
-      points: [
-        "New pattern development",
-        "Fabric & trim prototyping",
-        "Buyer custom spec matching",
-      ],
-    },
-    {
       id: "merchandising",
       title: "Merchandising",
       subtitle: "Seamless Execution",
@@ -214,6 +200,20 @@ export default function AboutPage() {
         "Clear buyer communication",
         "Production schedule tracking",
         "Supply chain synchronization",
+      ],
+    },
+    {
+      id: "sampling",
+      title: "Sampling",
+      subtitle: "Product Development",
+      iconSrc: "/icons/sampling.webp",
+      iconAlt: "Sampling",
+      highlight: "Rapid Prototyping & CAD Patterns",
+      description: "A dedicated sampling department supports buyer specifications, customized garment requirements, and rapid turnaround for pre-production approval:",
+      points: [
+        "New pattern development",
+        "Fabric & trim prototyping",
+        "Buyer custom spec matching",
       ],
     },
     {

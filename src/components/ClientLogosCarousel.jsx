@@ -60,7 +60,7 @@ export default function ClientLogosCarousel() {
             initial={{ opacity: 0, y: 14, filter: "blur(4px)" }}
             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             viewport={{ once: true }}
-            className="text-2xl sm:text-3xl lg:text-4xl font-headline font-black text-[#1A1A1A] tracking-tight leading-tight"
+            className="text-2xl sm:text-3xl lg:text-4xl xl:text-[40px] font-headline font-black tracking-tight text-[#171717] leading-tight"
           >
             Brands we have collaborated with
           </motion.h2>

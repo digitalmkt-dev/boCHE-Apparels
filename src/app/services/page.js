@@ -10,12 +10,12 @@ const facilityImages = {
   knitting: "/images/service-knitting.webp",
   "dyeing-fabric-processing": "/images/dying.webp",
   printing: "/images/printing .webp",
-  embroidery: "/images/service-embroidery.webp",
+  embroidery: "/images/service-embroidery-facility.webp",
   "sewing-production": "/images/sewing and production .webp",
   sampling: "/images/sampling.webp",
   merchandising: "/images/merchandising.webp",
-  "quality-checking": "/images/quality control.webp",
-  "quality-control": "/images/quality control.webp",
+  "quality-checking": "/images/service-quality-control.webp",
+  "quality-control": "/images/service-quality-control.webp",
 };
 
 export default function ServicesPage() {
