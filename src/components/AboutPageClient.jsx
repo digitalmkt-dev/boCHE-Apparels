@@ -356,9 +356,9 @@ export default function AboutPageClient() {
               transition={{ duration: 0.8, ease: GENTLE_EASE, delay: 0.2 }}
               className="pt-4 border-t border-[#E5E5E2] space-y-4"
             >
-              <h3 className="text-xl font-headline font-bold text-[#1A1A1A]">
+              <h2 className="text-xl font-headline font-bold text-[#1A1A1A]">
                 Who we are — from ideas to finished garments
-              </h3>
+              </h2>
               <p className="text-sm font-body text-[#555555] leading-relaxed text-justify">
                 At boCHE Apparels, we focus on supporting customers throughout the apparel manufacturing process. Our production ecosystem brings together product development, merchandising, knitting, fabric processing, printing, embroidery, production and quality control.
               </p>
@@ -723,9 +723,9 @@ export default function AboutPageClient() {
 
           {/* Group at a Glance Stats */}
           <div className="pt-8 border-t border-[#E5E5E2] space-y-6">
-            <h3 className="text-2xl font-headline font-bold text-[#1A1A1A] text-center">
+            <h2 className="text-2xl font-headline font-bold text-[#1A1A1A] text-center">
               Group at a Glance
-            </h3>
+            </h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 font-label">
               {groupStats.map((gStat, idx) => (
@@ -740,9 +740,9 @@ export default function AboutPageClient() {
                   <span className="text-3xl sm:text-4xl font-headline font-black text-[#1A1A1A] block">
                     {gStat.number}
                   </span>
-                  <h4 className="text-sm font-bold text-[#1A1A1A]">
+                  <h3 className="text-sm font-bold text-[#1A1A1A]">
                     {gStat.title}
-                  </h4>
+                  </h3>
                   <p className="text-xs font-body text-[#555555] leading-relaxed">
                     {gStat.desc}
                   </p>

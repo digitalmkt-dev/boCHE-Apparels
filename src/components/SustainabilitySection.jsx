@@ -26,7 +26,7 @@ export default function SustainabilitySection() {
                       <Leaf className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-[#1A1A1A]">GOTS & OEKO-TEX Certified</h4>
+                      <p className="text-sm font-bold text-[#1A1A1A]">GOTS & OEKO-TEX Certified</p>
                       <p className="text-xs font-body text-[#555555]">100% Organic Cotton & Zero Non-Toxic Dyes</p>
                     </div>
                   </div>

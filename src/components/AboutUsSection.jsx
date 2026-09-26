@@ -192,9 +192,9 @@ export default function AboutUsSection({ onOpenQuoteModal }) {
                       <ProgressiveImage src={card.iconSrc} alt={card.iconAlt} width={28} height={28} className="w-7 h-7 object-contain" />
                     </div>
                     <div>
-                      <h4 className="text-xs sm:text-sm font-bold text-[#1A1A1A] leading-snug">
+                      <h3 className="text-xs sm:text-sm font-bold text-[#1A1A1A] leading-snug">
                         {card.title}
-                      </h4>
+                      </h3>
                       <p className="text-[12px] font-body text-[#555555] leading-snug mt-1 text-left">
                         {card.desc}
                       </p>

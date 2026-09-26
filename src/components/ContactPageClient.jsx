@@ -165,9 +165,9 @@ export default function ContactPageClient() {
                   <span className="text-xs font-label font-bold text-[#555555] uppercase tracking-wider block">
                     {COMPANY_INFO.contact.designation}
                   </span>
-                  <h3 className="text-xl font-headline font-black text-[#1A1A1A]">
+                  <h2 className="text-xl font-headline font-black text-[#1A1A1A]">
                     {COMPANY_INFO.contact.generalManager}
-                  </h3>
+                  </h2>
                 </div>
               </div>
 
@@ -218,9 +218,9 @@ export default function ContactPageClient() {
                   <span className="text-xs font-label font-bold text-[#555555] uppercase tracking-wider block">
                     Manufacturing Facility
                   </span>
-                  <h3 className="text-xl font-headline font-black text-[#1A1A1A]">
+                  <h2 className="text-xl font-headline font-black text-[#1A1A1A]">
                     Address & working hours
-                  </h3>
+                  </h2>
                 </div>
               </div>
 

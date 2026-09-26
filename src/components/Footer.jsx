@@ -187,7 +187,7 @@ export default function Footer() {
               lg:pt-14
             "
           >
-            <h4
+            <h3
               className="
                 mb-5
                 border-l-2
@@ -210,7 +210,7 @@ export default function Footer() {
               "
             >
               QUICK LINKS
-            </h4>
+            </h3>
 
             <ul
               className="
@@ -305,7 +305,7 @@ export default function Footer() {
               lg:pt-14
             "
           >
-            <h4
+            <h3
               className="
                 mb-5
 
@@ -329,7 +329,7 @@ export default function Footer() {
               "
             >
               CONTACT US
-            </h4>
+            </h3>
 
             <ul
               className="
