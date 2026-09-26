@@ -43,33 +43,29 @@ export default function RangeOfProducts() {
         {/* ================= HEADER ================= */}
 
         <div className="relative mb-16 lg:mb-20">
-          <div className="mx-auto text-center">
-            {/* Eyebrow Badge */}
-            
-
+          <div className="flex flex-col items-center justify-center text-center max-w-2xl mx-auto">
             {/* Main Headline */}
             <motion.h2
               initial={{ opacity: 0, y: 16, filter: "blur(4px)" }}
               whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: GENTLE_LANDING_EASE, delay: 0.1 }}
-              className="text-2xl sm:text-3xl lg:text-4xl xl:text-[40px] font-headline font-black tracking-tight text-[#171717] leading-tight"
+              className="text-2xl sm:text-3xl lg:text-4xl xl:text-[40px] font-headline font-black tracking-tight text-[#171717] leading-tight text-center"
             >
               Range of Products
             </motion.h2>
 
+            {/* Sub Heading */}
             <motion.p
-              initial={{ opacity: 0, y: -12, filter: "blur(4px)" }}
+              initial={{ opacity: 0, y: 12, filter: "blur(4px)" }}
               whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               viewport={{ once: true }}
               transition={{ duration: 0.75, ease: GENTLE_LANDING_EASE }}
-              className="text-[11px] sm:text-xs lg:text-sm font-label font-bold uppercase tracking-[0.25em] text-[#555555] mt-2.5 sm:mt-3 block"
+              className="text-[11px] sm:text-xs lg:text-sm font-label font-bold uppercase tracking-[0.25em] text-[#555555] mt-2.5 sm:mt-3 text-center w-full"
             >
               GARMENTS FOR ALL AGES
             </motion.p>
           </div>
-
-
         </div>
 
         {/* =====================================================
