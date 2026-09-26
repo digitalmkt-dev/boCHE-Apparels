@@ -65,6 +65,7 @@ export default function Footer() {
           >
             <Link
               href="/"
+              title="boCHE Apparels Home"
               className="
                 inline-flex
                 flex-col
@@ -76,6 +77,7 @@ export default function Footer() {
               <Image
                 src="/logo/bocheapprels2.webp"
                 alt="boCHE Apparels Logo"
+                title="boCHE Apparels Logo"
                 width={180}
                 height={54}
                 unoptimized
@@ -233,6 +235,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/"
+                  title="Home"
                   className="transition-colors hover:text-[#FBE87E]"
                 >
                   Home
@@ -242,6 +245,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/about"
+                  title="About Us"
                   className="transition-colors hover:text-[#FBE87E]"
                 >
                   About Us
@@ -251,6 +255,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/catalog"
+                  title="Products"
                   className="transition-colors hover:text-[#FBE87E]"
                 >
                   Products
@@ -260,6 +265,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/services"
+                  title="Facilities"
                   className="transition-colors hover:text-[#FBE87E]"
                 >
                   Facilities
@@ -271,6 +277,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/contact"
+                  title="Contact Us"
                   className="transition-colors hover:text-[#FBE87E]"
                 >
                   Contact Us
@@ -369,11 +376,11 @@ export default function Footer() {
                     Address:
                   </strong>
 
-                  Boby Chemmanur Enterprises Pvt Ltd
-                  <br />
-                  No 10, Poonthottam, Murugampalayam Extn,
-                  <br />
-                  Kumarnagar, Tirupur, India - 641603
+                  {COMPANY_INFO.contact.addressLines.map((line, idx) => (
+                    <span key={idx} className="block">
+                      {line}
+                    </span>
+                  ))}
                 </span>
               </li>
 
@@ -393,6 +400,7 @@ export default function Footer() {
 
                 <a
                   href={`tel:${COMPANY_INFO.contact.phone}`}
+                  title="Call boCHE Apparels"
                   className="text-slate-300 transition-colors hover:text-[#FBE87E]"
                 >
                   {COMPANY_INFO.contact.phone}
@@ -415,6 +423,7 @@ export default function Footer() {
 
                 <a
                   href={`mailto:${COMPANY_INFO.contact.salesEmail}`}
+                  title="Email boCHE Apparels"
                   className="
                     break-all
                     text-slate-300
@@ -438,6 +447,7 @@ export default function Footer() {
             href="https://www.chemmanurinternationalgroup.com/"
             target="_blank"
             rel="noopener noreferrer"
+            title="Boby Chemmanur International Group Website"
             className="
               flex
               flex-col
@@ -483,6 +493,7 @@ export default function Footer() {
             <Image
               src="/logo/group-logo.webp"
               alt="Boby Chemmanur International Group Emblem"
+              title="Boby Chemmanur International Group Emblem"
               width={140}
               height={140}
               className="mt-3 h-24 sm:h-24 md:h-22 lg:h-24 w-auto object-contain brightness-110 group-hover:scale-105 transition-transform duration-300" />

@@ -66,7 +66,7 @@ export default function PageHeaderBanner({ title, subtitle, breadcrumb, bgImage 
 
         {/* Breadcrumb */}
         <div className="pt-2 flex items-center justify-center gap-2 text-xs sm:text-sm font-label font-bold text-slate-300">
-          <Link href="/" className="hover:text-[#FBE87E] transition-colors">
+          <Link href="/" title="boCHE Apparels Home" className="hover:text-[#FBE87E] transition-colors">
             Home
           </Link>
           <ChevronRight className="w-4 h-4 text-[#FBE87E]" />

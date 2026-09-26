@@ -35,7 +35,12 @@ export const COMPANY_INFO = {
     phone: "+91 6235 000 902",
     hotline: "+91 6235 000 902",
     address:
-      "Boby Chemmanur Enterprises Pvt Ltd, No 10, Poonthottam, Murugampalayam Extn, Kumarnagar, Tirupur, India - 641603",
+      "Boby Chemmanur Enterprises Pvt Ltd, Poonthottam, Murugampalayam Extn, Kumarnagar, Tirupur, India - 641603",
+    addressLines: [
+      "Boby Chemmanur Enterprises Pvt Ltd,",
+      "Poonthottam, Murugampalayam Extn,",
+      "Kumarnagar, Tirupur, India - 641603",
+    ],
     workingHours: "Monday - Saturday: 9:00 AM - 6:00 PM IST",
     coordinates: { lat: 11.116383290607224, lng: 77.32746780022696 },
     mapEmbedUrl:
@@ -48,7 +53,7 @@ export const PRODUCT_CATEGORIES = [
     id: "kids-wear",
     name: "Kids wear",
     description:
-      "Kids co-ord sets, top & bottom sets, printed kids sets, long-sleeve tops, sleeveless garments, tank tops, baby/toddler garments, kids T-shirts, and polo-style garments.",
+      "Kids co-ord sets, top & bottom sets, printed kids sets, long-sleeve tops, sleeveless tops, tank tops, kids T-shirts, and polo tees.",
   },
   {
     id: "ladies-wear",

@@ -103,6 +103,7 @@ export default function FloatingActions() {
             {/* Option 1: Call Now */}
             <a
               href={phoneUrl}
+              title="Call boCHE Apparels"
               onClick={() => setIsMenuOpen(false)}
               className="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-[#FBE87E] text-white hover:text-[#1A1A1A] transition-all duration-200 group no-underline"
             >
@@ -124,6 +125,7 @@ export default function FloatingActions() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
+              title="Chat on WhatsApp with boCHE Apparels"
               onClick={() => setIsMenuOpen(false)}
               className="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-[#25D366] text-white transition-all duration-200 group no-underline"
             >

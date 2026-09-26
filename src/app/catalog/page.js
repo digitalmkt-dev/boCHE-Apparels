@@ -1,31 +1,18 @@
-"use client";
+import CatalogPageClient from "@/components/CatalogPageClient";
+import { constructMetadata, generateBreadcrumbSchema } from "@/data/seoMetadata";
 
-import { useState } from "react";
-import ProductCatalog from "@/components/ProductCatalog";
-import QuoteModal from "@/components/QuoteModal";
-import PageHeaderBanner from "@/components/PageHeaderBanner";
+export const metadata = constructMetadata({ pageKey: "catalog" });
 
 export default function CatalogPage() {
-  const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
-
-  const openQuoteModal = () => {
-    if (typeof window !== "undefined") {
-      window.open("/documents/COMPANY PROFILE.pdf", "_blank");
-    }
-  };
-  const closeQuoteModal = () => setIsQuoteModalOpen(false);
+  const breadcrumbSchema = generateBreadcrumbSchema("Products", "/catalog");
 
   return (
-    <div className="bg-[#F9F9F9] text-[#1A1A1A] min-h-screen">
-      {/* Header Banner */}
-      <PageHeaderBanner
-        title="Products"
-        breadcrumb="Products"
-        bgImage="/images/product_titile.webp"
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-
-      <ProductCatalog onOpenQuoteModal={openQuoteModal} />
-      <QuoteModal isOpen={isQuoteModalOpen} onClose={closeQuoteModal} />
-    </div>
+      <CatalogPageClient />
+    </>
   );
 }

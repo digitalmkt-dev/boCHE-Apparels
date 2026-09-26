@@ -200,6 +200,7 @@ export default function RangeOfProducts() {
           <div className="flex justify-center">
             <Link
               href="/products"
+              title="View Our Product Ranges"
               className="btn-circle-hover font-black px-8 py-3.5 sm:px-9 sm:py-4 rounded-full text-xs font-label uppercase tracking-wider inline-flex items-center justify-center gap-2.5 shadow-md cursor-pointer border-none"
             >
               <span>VIEW OUR PRODUCT RANGES</span>
@@ -222,6 +223,7 @@ function ProductCard({ category }) {
   return (
     <Link
       href={category.link}
+      title={`View ${category.name} Collection`}
       className="group relative block h-full w-full overflow-hidden rounded-[28px] bg-[#ddd] shadow-[0_16px_38px_rgba(0,0,0,0.10)] transition-all duration-500 hover:-translate-y-[6px] hover:shadow-[0_24px_50px_rgba(0,0,0,0.16)]"
     >
       {/* IMAGE */}

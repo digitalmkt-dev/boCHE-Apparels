@@ -64,10 +64,11 @@ export default function Header({ onOpenQuoteModal }) {
           >
             <div className="w-full max-w-7xl rounded-full bg-white/95 backdrop-blur-md border border-[#E5E5E2] shadow-2xl py-2.5 sm:py-5 px-4 sm:px-10 mt-2.5 sm:mt-5 flex items-center justify-between">
               {/* Logo */}
-              <Link href="/" className="flex items-center gap-3 group">
+              <Link href="/" title="boCHE Apparels Home" className="flex items-center gap-3 group">
                 <Image
                   src="/logo/bocheapprels.webp"
                   alt="boCHE Apparels Logo"
+                  title="boCHE Apparels Logo"
                   width={220}
                   height={60}
                   unoptimized
@@ -83,6 +84,7 @@ export default function Header({ onOpenQuoteModal }) {
                     <Link
                       key={link.name}
                       href={link.href}
+                      title={link.name}
                       className={`text-sm font-black tracking-wider transition-colors relative py-1.5 group ${
                         isActive ? "text-[#1A1A1A]" : "text-[#1A1A1A]/70 hover:text-[#1A1A1A]"
                       }`}
@@ -104,6 +106,7 @@ export default function Header({ onOpenQuoteModal }) {
                   href="/documents/COMPANY PROFILE.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="Download E-Brochure PDF"
                   className="hidden sm:inline-flex items-center gap-2.5 btn-circle-hover font-black px-7 py-3.5 rounded-full text-xs tracking-wider border-none active:scale-95 cursor-pointer no-underline text-[#1A1A1A]"
                 >
                   <span>E-BROCHURE</span>
@@ -130,10 +133,11 @@ export default function Header({ onOpenQuoteModal }) {
             }`}
           >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-2.5 sm:py-4 flex items-center justify-between">
-              <Link href="/" className="flex items-center gap-3 group">
+              <Link href="/" title="boCHE Apparels Home" className="flex items-center gap-3 group">
                 <Image
                   src="/logo/bocheapprels.webp"
                   alt="boCHE Apparels Logo"
+                  title="boCHE Apparels Logo"
                   width={200}
                   height={54}
                   unoptimized
@@ -148,6 +152,7 @@ export default function Header({ onOpenQuoteModal }) {
                     <Link
                       key={link.name}
                       href={link.href}
+                      title={link.name}
                       className={`text-sm font-black tracking-wider transition-colors relative py-1.5 group ${
                         isActive ? "text-[#1A1A1A]" : "text-[#1A1A1A]/70 hover:text-[#1A1A1A]"
                       }`}
@@ -168,6 +173,7 @@ export default function Header({ onOpenQuoteModal }) {
                   href="/documents/COMPANY PROFILE.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="Download E-Brochure PDF"
                   className="hidden sm:inline-flex items-center gap-2.5 btn-circle-hover font-black px-7 py-3 rounded-full text-xs tracking-wider border-none active:scale-95 cursor-pointer no-underline text-[#1A1A1A]"
                 >
                   <span>E-BROCHURE</span>
@@ -199,10 +205,11 @@ export default function Header({ onOpenQuoteModal }) {
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex items-center justify-between">
             {/* Brand Logo */}
-            <Link href="/" className="flex items-center gap-3 group">
+            <Link href="/" title="boCHE Apparels Home" className="flex items-center gap-3 group">
               <Image
                 src="/logo/bocheapprels2.webp"
                 alt="boCHE Apparels Logo"
+                title="boCHE Apparels Logo"
                 width={200}
                 height={54}
                 unoptimized
@@ -218,6 +225,7 @@ export default function Header({ onOpenQuoteModal }) {
                   <Link
                     key={link.name}
                     href={link.href}
+                    title={link.name}
                     className={`text-sm font-black tracking-wider transition-colors relative py-1.5 group ${
                       isActive ? "text-[#FBE87E]" : "text-white/80 hover:text-white"
                     }`}
@@ -240,6 +248,7 @@ export default function Header({ onOpenQuoteModal }) {
                 href="/documents/COMPANY PROFILE.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
+                title="Download E-Brochure PDF"
                 className="hidden sm:inline-flex items-center gap-2.5 btn-circle-hover-light font-black px-7 py-3 rounded-full text-xs tracking-wider border-none active:scale-95 cursor-pointer no-underline text-white"
               >
                 <span>E-BROCHURE</span>
@@ -275,10 +284,11 @@ export default function Header({ onOpenQuoteModal }) {
       >
         {/* Top Header */}
         <div className="p-6 border-b border-[#E5E5E2] flex items-center justify-between bg-[#F9F9F9]">
-          <Link href="/" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2">
+          <Link href="/" title="boCHE Apparels Home" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2">
             <Image
               src={isHomePage ? "/logo/bocheapprels.webp" : "/logo/bocheapprels2.webp"}
               alt="boCHE Apparels Logo"
+              title="boCHE Apparels Logo"
               width={180}
               height={50}
               unoptimized
@@ -307,6 +317,7 @@ export default function Header({ onOpenQuoteModal }) {
                 <Link
                   key={link.name}
                   href={link.href}
+                  title={link.name}
                   onClick={() => setMobileMenuOpen(false)}
                   className={`flex items-center justify-between px-4 py-3.5 rounded-2xl text-base font-black tracking-wider transition-all ${
                     isActive
@@ -328,6 +339,7 @@ export default function Header({ onOpenQuoteModal }) {
             href="/documents/COMPANY PROFILE.pdf"
             target="_blank"
             rel="noopener noreferrer"
+            title="Download E-Brochure PDF"
             onClick={() => setMobileMenuOpen(false)}
             className="w-full btn-circle-hover font-black px-6 py-4 rounded-full text-xs tracking-wider border-none flex items-center justify-center gap-2.5 shadow-lg cursor-pointer no-underline text-[#1A1A1A]"
           >

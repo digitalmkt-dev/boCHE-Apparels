@@ -139,6 +139,7 @@ export default function ServicesShowcaseSection() {
         >
           <Link
             href="/services"
+            title="Explore Our Facilities & Services"
             className="btn-circle-hover inline-flex items-center gap-2.5 px-8 py-4 rounded-full border border-transparent shadow-sm text-xs font-label font-bold tracking-widest text-[#171717] bg-[#FBE36B] cursor-pointer"
           >
             <span>EXPLORE OUR FACILITIES & SERVICES</span>

@@ -46,7 +46,7 @@ export default function SustainabilitySection() {
               Ethical garment production & environmental stewardship
             </h2>
 
-            <p className="text-[#555555] font-body text-sm sm:text-base leading-relaxed">
+            <p className="text-[#555555] font-body text-sm sm:text-base leading-relaxed text-justify">
               At boCHE Apparels, sustainability is not an afterthought—it is baked into our manufacturing DNA. From organic yarn sourcing to 95% water recycling, we empower global brands to build eco-conscious fashion lines.
             </p>
 
@@ -60,7 +60,7 @@ export default function SustainabilitySection() {
                     <span className="text-lg font-headline font-black text-[#1A1A1A]">{pillar.stat}</span>
                   </div>
                   <h3 className="text-sm font-headline font-bold text-[#1A1A1A]">{pillar.title}</h3>
-                  <p className="text-xs font-body text-[#555555] leading-normal">{pillar.description}</p>
+                  <p className="text-xs font-body text-[#555555] leading-normal text-left">{pillar.description}</p>
                 </div>
               ))}
             </div>
@@ -68,6 +68,7 @@ export default function SustainabilitySection() {
             <div className="pt-4 font-label">
               <Link
                 href="/sustainability"
+                title="Read Full ESG & Sustainability Policy"
                 className="inline-flex items-center gap-2 text-[#1A1A1A] hover:text-[#555555] font-extrabold text-sm"
               >
                 <span>Read Full ESG & Sustainability Policy</span>

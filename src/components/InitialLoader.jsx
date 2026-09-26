@@ -71,6 +71,7 @@ export default function InitialLoader() {
               <Image
                 src="/logo/bocheapprels2.webp"
                 alt="boCHE Apparels Logo"
+                title="boCHE Apparels Logo"
                 width={260}
                 height={80}
                 priority

@@ -29,7 +29,7 @@ export default function CapabilitiesGrid({ onOpenQuoteModal }) {
           <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[40px] font-headline font-black tracking-tight text-[#171717] leading-tight">
             Complete apparel manufacturing services
           </h2>
-          <p className="text-[#555555] font-body text-base leading-relaxed">
+          <p className="text-[#555555] font-body text-base leading-relaxed text-justify">
             boCHE Apparels provides complete garment manufacturing support across Merchandising, Sampling, Knitting, Fabric Processing, Printing, Embroidery, Production, and Quality Control for Men's, Women's, and Kids Wear.
           </p>
         </div>
@@ -63,7 +63,7 @@ export default function CapabilitiesGrid({ onOpenQuoteModal }) {
                     {service.title}
                   </h3>
 
-                  <p className="text-[#555555] font-body text-xs sm:text-sm leading-relaxed">
+                  <p className="text-[#555555] font-body text-xs sm:text-sm leading-relaxed text-left">
                     {service.shortDesc}
                   </p>
 
@@ -80,6 +80,7 @@ export default function CapabilitiesGrid({ onOpenQuoteModal }) {
                 <div className="pt-6 mt-6 border-t border-[#E5E5E2] flex items-center justify-between font-label">
                   <Link
                     href={`/services#${service.id}`}
+                    title={`View ${service.title} Technical Specifications`}
                     className="text-xs font-extrabold text-[#1A1A1A] hover:text-[#555555] flex items-center gap-1 group-hover:translate-x-1 transition-transform"
                   >
                     <span>Technical Specs</span>
@@ -90,6 +91,7 @@ export default function CapabilitiesGrid({ onOpenQuoteModal }) {
                     href="/documents/COMPANY PROFILE.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
+                    title="Download E-Brochure PDF"
                     className="btn-circle-hover text-[11px] px-4 py-2 rounded-xl font-bold border border-transparent shadow-sm cursor-pointer no-underline text-[#1A1A1A]"
                   >
                     E-Brochure

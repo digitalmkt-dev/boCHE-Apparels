@@ -116,7 +116,7 @@ export default function GlobalError({ error, reset }) {
             <button type="button" className="btn-primary" onClick={() => reset()}>
               Try Again
             </button>
-            <a href="/" className="btn-secondary">
+            <a href="/" title="Return to Home" className="btn-secondary">
               Go Home
             </a>
           </div>

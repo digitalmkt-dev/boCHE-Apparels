@@ -7,6 +7,7 @@ import { getBlurDataURL } from "@/utils/blurUtils";
 export default function ProgressiveImage({
   src,
   alt = "",
+  title,
   className = "",
   placeholder,
   blurDataURL,
@@ -25,12 +26,15 @@ export default function ProgressiveImage({
     cleanSrc.includes("favicon") ||
     cleanSrc.includes("logo");
 
+  const imgTitle = title || props.title || alt || "boCHE Apparels";
+
   // For logos and icons, render crisp image directly with no blur effect
   if (isLogoOrIcon) {
     return (
       <Image
         src={src}
         alt={alt}
+        title={imgTitle}
         onLoad={onLoad}
         className={className}
         {...props}
@@ -44,6 +48,7 @@ export default function ProgressiveImage({
     <Image
       src={src}
       alt={alt}
+      title={imgTitle}
       placeholder={placeholder || "blur"}
       blurDataURL={resolvedBlurURL}
       onLoad={(e) => {

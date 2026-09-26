@@ -95,7 +95,7 @@ export default function AboutUsSection({ onOpenQuoteModal }) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-6 items-center">
 
           {/* Left Column: Content & Features */}
-          <div className="lg:col-span-6 space-y-6 lg:pr-4 flex flex-col items-start text-left">
+          <div className="lg:col-span-6 space-y-6 lg:pr-4 flex flex-col items-start">
 
             {/* Secondary Heading */}
             {/* <motion.p
@@ -137,13 +137,13 @@ export default function AboutUsSection({ onOpenQuoteModal }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.9, ease: GENTLE_LANDING_EASE, delay: 0.35 }}
-              className="text-sm sm:text-base font-body text-[#555555] leading-relaxed w-full lg:max-w-[500px] text-left"
+              className="text-sm sm:text-base font-body text-[#555555] leading-relaxed w-full lg:max-w-[500px] text-justify"
             >
               <strong className="text-[#1A1A1A]">boCHE Apparels</strong>, part of <strong className="text-[#1A1A1A]">Boby Chemmanur International Group</strong> (registered as <strong className="text-[#1A1A1A]">Boby Chemmanur Enterprises Pvt Ltd</strong>), is a prominent Apparel manufacturing unit located in Tirupur, India. Specializing in high-quality apparel production, we offer a wide range of garments including men’s, women’s, and children’s wear, along with custom designs and private label services.
             </motion.p>
 
             {/* Checklist 2x2 Grid - Slow & Smooth Slide UP One by One */}
-            {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3.5 gap-x-4 pt-1 font-label w-full lg:max-w-[500px] text-left">
+            {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3.5 gap-x-4 pt-1 font-label w-full lg:max-w-[500px]">
               {highlights.map((item, idx) => (
                 <motion.div
                   key={idx}
@@ -176,7 +176,7 @@ export default function AboutUsSection({ onOpenQuoteModal }) {
             </motion.div>
 
             {/* 2 Feature Cards with Content-Matched Icons (Scissors & Factory) */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-1 font-label w-full lg:max-w-[500px] text-left">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-1 font-label w-full lg:max-w-[500px]">
               {featureCards.map((card, idx) => {
                 return (
                   <motion.div
@@ -195,7 +195,7 @@ export default function AboutUsSection({ onOpenQuoteModal }) {
                       <h4 className="text-xs sm:text-sm font-bold text-[#1A1A1A] leading-snug">
                         {card.title}
                       </h4>
-                      <p className="text-[12px] font-body text-[#555555] leading-snug mt-1">
+                      <p className="text-[12px] font-body text-[#555555] leading-snug mt-1 text-left">
                         {card.desc}
                       </p>
                     </div>
@@ -214,6 +214,7 @@ export default function AboutUsSection({ onOpenQuoteModal }) {
             >
               <Link
                 href="/about"
+                title="Explore More About Us"
                 className="btn-circle-hover px-8 py-3.5 rounded-full text-xs font-black tracking-wider uppercase inline-flex items-center justify-center gap-2 shadow-md cursor-pointer"
               >
                 <span>EXPLORE MORE</span>

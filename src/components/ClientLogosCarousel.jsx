@@ -117,6 +117,7 @@ export default function ClientLogosCarousel() {
                   <img
                     src={item.logo}
                     alt={`${item.name} logo`}
+                    title={`${item.name} logo`}
                     className="max-h-12 sm:max-h-16 md:max-h-20 max-w-full object-contain transition-all duration-300 group-hover/logo:scale-110"
                     loading="lazy"
                   />

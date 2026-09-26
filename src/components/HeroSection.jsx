@@ -146,6 +146,7 @@ export default function HeroSection({ onOpenQuoteModal }) {
           <div className="animate-hero-slide-up pt-2 sm:pt-3 md:pt-3 flex flex-wrap items-center gap-4 font-label">
             <Link
               href={activeSlide.buttonLink}
+              title={activeSlide.buttonText}
               className="btn-circle-hover font-black px-6 py-3 sm:px-8 sm:py-3.5 2xl:px-9 2xl:py-4 rounded-full text-xs tracking-wider border-none shadow-2xl flex items-center gap-2.5 active:scale-95 cursor-pointer no-underline text-[#1A1A1A]"
             >
               <span>{activeSlide.buttonText}</span>

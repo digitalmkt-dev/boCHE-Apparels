@@ -30,6 +30,11 @@
   h6 {
     font-family: 'Hanken Grotesk', system-ui, sans-serif;
   }
+
+  p {
+    text-align: justify;
+    text-justify: inter-word;
+  }
 }
 
 .font-headline {

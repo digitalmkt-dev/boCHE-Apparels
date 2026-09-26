@@ -131,7 +131,7 @@ export default function QualityPolicySection() {
                 whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.85, ease: GENTLE_LANDING_EASE, delay: 0.2 }}
-                className="pt-1 text-xs sm:text-sm font-body text-[#555] leading-relaxed max-w-xl"
+                className="pt-1 text-xs sm:text-sm font-body text-[#555] leading-relaxed max-w-xl text-justify"
               >
                 At boCHE Apparels, quality is an integral part of every stage of garment manufacturing. Our focus is on maintaining consistent product standards, meeting buyer specifications and supporting reliable, timely production.
               </motion.p>
@@ -165,7 +165,7 @@ export default function QualityPolicySection() {
                     <h3 className="text-base sm:text-lg font-headline font-black text-[#171717] tracking-tight">
                       {step.title}
                     </h3>
-                    <p className="text-xs sm:text-[13px] font-body text-[#666] leading-relaxed">
+                    <p className="text-xs sm:text-[13px] font-body text-[#666] leading-relaxed text-left">
                       {step.desc}
                     </p>
                   </div>

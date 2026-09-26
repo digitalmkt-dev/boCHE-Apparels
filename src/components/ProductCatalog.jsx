@@ -204,7 +204,7 @@ function ProductCatalogContent({ onOpenQuoteModal }) {
     },
     {
       id: "k-2",
-      name: "Polo-style Garments",
+      name: "Polo Tees",
       category: "Kids Wear",
       image: "/images/products/kids polo t-shirt.webp",
       fabric: "200 GSM Pique Knit",
@@ -249,7 +249,7 @@ function ProductCatalogContent({ onOpenQuoteModal }) {
     },
     {
       id: "k-7",
-      name: "Sleeveless Garments",
+      name: "Sleeveless Tops",
       category: "Kids Wear",
       image: "/images/products/kids sleeveless t-shirts.webp",
       fabric: "160 GSM Lightweight Cotton Rib",

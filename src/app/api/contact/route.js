@@ -138,7 +138,7 @@ export async function POST(request) {
                             Email Address
                           </td>
                           <td style="padding:14px 18px; font-size:14px; font-weight:600; color:#1A1A1A; border-bottom:1px solid #EBEBEB;">
-                            <a href="mailto:${sanitizedEmail}" style="color:#1A1A1A; text-decoration:none; font-weight:700;">${sanitizedEmail}</a>
+                            <a href="mailto:${sanitizedEmail}" title="Email ${sanitizedEmail}" style="color:#1A1A1A; text-decoration:none; font-weight:700;">${sanitizedEmail}</a>
                           </td>
                         </tr>
 
@@ -147,7 +147,7 @@ export async function POST(request) {
                             Phone Number
                           </td>
                           <td style="padding:14px 18px; font-size:14px; font-weight:700; color:#1A1A1A; border-bottom:1px solid #EBEBEB;">
-                            <a href="tel:${sanitizedPhone}" style="color:#1A1A1A; text-decoration:none;">${sanitizedPhone}</a>
+                            <a href="tel:${sanitizedPhone}" title="Call ${sanitizedPhone}" style="color:#1A1A1A; text-decoration:none;">${sanitizedPhone}</a>
                           </td>
                         </tr>
 
@@ -247,7 +247,7 @@ export async function POST(request) {
                         For assistance, contact
                       </p>
                       <p style="font-size:18px; font-weight:800; color:#1A1A1A; margin-top:0; margin-bottom:0;">
-                        <a href="mailto:gm@bocheapparels.com" style="color:#1A1A1A; text-decoration:none;">gm@bocheapparels.com</a>
+                        <a href="mailto:gm@bocheapparels.com" title="Email General Manager" style="color:#1A1A1A; text-decoration:none;">gm@bocheapparels.com</a>
                       </p>
 
                     </td>
@@ -260,7 +260,7 @@ export async function POST(request) {
                         boCHE Apparels
                       </p>
                       <p style="font-size:13px; color:#777777; margin-top:0; margin-bottom:0;">
-                        <a href="https://bocheapparels.com" style="color:#777777; text-decoration:none;">bocheapparels.com</a>
+                        <a href="https://bocheapparels.com" title="boCHE Apparels Website" style="color:#777777; text-decoration:none;">bocheapparels.com</a>
                       </p>
                     </td>
                   </tr>
