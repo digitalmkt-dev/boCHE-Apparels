@@ -190,7 +190,7 @@ export function constructMetadata({ pageKey, title, description, keywords, canon
         {
           url: ogImageUrl,
           width: 1200,
-          height: 630,
+          height: 1200,
           alt: metaTitle,
         },
       ],
