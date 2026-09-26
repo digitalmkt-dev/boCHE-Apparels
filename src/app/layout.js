@@ -1,6 +1,11 @@
 import "./globals.css";
 import ClientLayoutWrapper from "@/components/ClientLayoutWrapper";
-import { siteConfig, generateOrganizationSchema } from "@/data/seoMetadata";
+import {
+  siteConfig,
+  generateOrganizationSchema,
+  generateWebsiteSchema,
+  generateServiceSchema,
+} from "@/data/seoMetadata";
 
 const siteUrl = siteConfig.url;
 
@@ -58,6 +63,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   const orgSchema = generateOrganizationSchema();
+  const websiteSchema = generateWebsiteSchema();
+  const serviceSchema = generateServiceSchema();
 
   return (
     <html
@@ -80,6 +87,14 @@ export default function RootLayout({ children }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
         />
       </head>
       <body

@@ -206,21 +206,23 @@ export function constructMetadata({ pageKey, title, description, keywords, canon
 }
 
 /**
- * Generates JSON-LD Structured Data Schema for search engines
+ * Generates JSON-LD Structured Data Schema for search engines and AI LLM crawlers
  */
 export function generateOrganizationSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": "ClothingStore",
+    "@type": ["Organization", "Corporation", "ClothingStore"],
     "@id": `${SITE_URL}/#organization`,
     name: siteConfig.name,
     legalName: siteConfig.legalName,
+    alternateName: ["boCHE Apparels", "Boby Chemmanur Apparel", "boCHE Garments"],
     url: SITE_URL,
-    logo: `${SITE_URL}/logo.png`,
+    logo: `${SITE_URL}/logo/bocheapprels.webp`,
     image: siteConfig.ogImage,
     description: siteConfig.description,
     telephone: siteConfig.phone,
     email: siteConfig.email,
+    foundingDate: "1863",
     address: {
       "@type": "PostalAddress",
       streetAddress: siteConfig.address.street,
@@ -234,15 +236,166 @@ export function generateOrganizationSchema() {
       latitude: siteConfig.coordinates.latitude,
       longitude: siteConfig.coordinates.longitude,
     },
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: siteConfig.phone,
+        contactType: "sales",
+        email: siteConfig.email,
+        availableLanguage: ["English", "Tamil", "Hindi"],
+      },
+    ],
     parentOrganization: {
       "@type": "Organization",
       name: siteConfig.groupName,
+      url: "https://www.chemmanurinternationalgroup.com/",
     },
+    knowsAbout: [
+      "Apparel Manufacturing",
+      "Garment Export Production",
+      "Custom T-shirt Production",
+      "Textile Knitting and Dyeing",
+      "Kids Wear Manufacturing",
+      "Women's Wear Manufacturing",
+    ],
     sameAs: [
       "https://www.facebook.com/bocheapparels",
       "https://www.instagram.com/bocheapparels",
       "https://www.linkedin.com/company/boche-apparels",
     ],
+  };
+}
+
+/**
+ * Generates WebSite Schema for Search Engines & AI LLMs
+ */
+export function generateWebsiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
+    url: SITE_URL,
+    name: siteConfig.name,
+    description: siteConfig.description,
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.legalName,
+      logo: `${SITE_URL}/logo/bocheapprels.webp`,
+    },
+    inLanguage: "en-US",
+  };
+}
+
+/**
+ * Generates Service Schema for Manufacturing Facilities
+ */
+export function generateServiceSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${SITE_URL}/services#service`,
+    name: "Apparel & Garment Manufacturing Services",
+    serviceType: "Garment Manufacturing",
+    provider: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: SITE_URL,
+    },
+    areaServed: "Worldwide",
+    description: "Complete garment manufacturing services including Sampling, Merchandising, Knitting, Fabric Dyeing, Printing, Embroidery, Sewing, and Quality Assurance.",
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Manufacturing Capabilities",
+      itemListElement: [
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Custom Garment Sampling & Pattern Design" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Textile Knitting & Fabric Processing" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Screen Printing & Embroidery" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Bulk Sewing & Assembly" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "AQL 2.5 Quality Assurance Control" } },
+      ],
+    },
+  };
+}
+
+/**
+ * Generates Product ItemList Schema for Catalog & Products Page
+ */
+export function generateProductCatalogSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": `${SITE_URL}/catalog#productlist`,
+    name: "boCHE Apparels Manufactured Products",
+    description: "Full range of manufactured apparel including Men's Wear, Women's Wear, and Kids Wear.",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        item: {
+          "@type": "Product",
+          name: "Men's T-Shirts & Polo Tees",
+          description: "High-grade 100% cotton crew neck T-shirts and polo tees for men.",
+          brand: { "@type": "Brand", name: siteConfig.name },
+          category: "Men's Wear",
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        item: {
+          "@type": "Product",
+          name: "Women's Tops, Tees & Leggings",
+          description: "Premium knitwear, casual tops, leggings, and co-ord sets for women.",
+          brand: { "@type": "Brand", name: siteConfig.name },
+          category: "Women's Wear",
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        item: {
+          "@type": "Product",
+          name: "Kids Wear & Polo Tees",
+          description: "Soft cotton kids polo tees, sleeveless tops, and pyjama sets.",
+          brand: { "@type": "Brand", name: siteConfig.name },
+          category: "Kids Wear",
+        },
+      },
+    ],
+  };
+}
+
+/**
+ * Generates Article / BlogPosting Schema with author, publisher, and freshness dates
+ */
+export function generateArticleSchema({ title, description, url, datePublished, dateModified, image }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `${url || SITE_URL}/#article`,
+    headline: title || siteConfig.name,
+    description: description || siteConfig.description,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": url || SITE_URL,
+    },
+    inLanguage: "en-US",
+    datePublished: datePublished || "2024-01-15T08:00:00+05:30",
+    dateModified: dateModified || new Date().toISOString(),
+    author: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: SITE_URL,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.legalName,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/logo/bocheapprels.webp`,
+      },
+    },
+    image: image ? (image.startsWith("http") ? image : `${SITE_URL}${image}`) : siteConfig.ogImage,
   };
 }
 
@@ -273,3 +426,4 @@ export function generateBreadcrumbSchema(pageName, pagePath) {
     ],
   };
 }
+

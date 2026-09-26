@@ -1,0 +1,37 @@
+# agents.txt - AI Agent & Autonomous Crawler Policy Declaration
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# AI Agent Specific Access Rules
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Cohere-ai
+Allow: /
+
+# Canonical Site Metadata
+Site: https://bocheapparels.com
+Llms-Txt: https://bocheapparels.com/llms.txt
+Sitemap: https://bocheapparels.com/sitemap.xml
+Robots: https://bocheapparels.com/robots.txt
+Organization: Boby Chemmanur Enterprises Pvt Ltd
+Contact: gm@bocheapparels.com
