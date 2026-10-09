@@ -556,7 +556,15 @@ export default function Footer() {
           >
             <p className="leading-[1.6]">
               © {new Date().getFullYear()} {COMPANY_INFO.name}. All Rights
-              Reserved. Industrial Craft Garment Unit.
+              Reserved. | Powered by{" "}
+              <a
+                href="https://ciinfos.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#FBE87E] transition-colors"
+              >
+                CIINFOS
+              </a>
             </p>
           </div>
         </div>
