@@ -324,7 +324,8 @@ export default function AboutPageClient() {
     <div className="bg-[#F9F9F9] text-[#1A1A1A] min-h-screen">
       {/* Title Banner */}
       <PageHeaderBanner
-        title="About us"
+        title="Garment Factory in Tirupur"
+        subtitle="Complete custom apparel manufacturing infrastructure from fiber to fashion under Boby Chemmanur International Group."
         breadcrumb="About Us"
         bgImage="/images/about-title.webp"
       />

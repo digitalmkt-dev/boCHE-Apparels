@@ -1,8 +1,16 @@
 import { NextResponse } from "next/server";
 import path from "path";
 import fs from "fs";
-import { parsePhoneNumberFromString } from "libphonenumber-js";
 import { sendInquiryEmail } from "@/lib/nodemailer";
+
+function escapeHtml(str) {
+  return String(str || "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
 
 export async function POST(request) {
   try {
@@ -49,6 +57,11 @@ export async function POST(request) {
         { status: 400 }
       );
     }
+
+    const safeName = escapeHtml(sanitizedName);
+    const safeEmail = escapeHtml(sanitizedEmail);
+    const safePhone = escapeHtml(sanitizedPhone);
+    const safeMessage = escapeHtml(sanitizedMessage).replace(/\n/g, "<br>");
 
     const user = process.env.REDIFF_SMTP_USER || "enquiry@bocheapparels.com";
     const recipient = process.env.RECIPIENT_EMAIL || "gm@bocheapparels.com";
@@ -129,7 +142,7 @@ export async function POST(request) {
                             Name
                           </td>
                           <td width="65%" style="padding:14px 18px; font-size:14px; font-weight:700; color:#1A1A1A; border-bottom:1px solid #EBEBEB;">
-                            ${sanitizedName}
+                            ${safeName}
                           </td>
                         </tr>
 
@@ -137,8 +150,8 @@ export async function POST(request) {
                           <td style="padding:14px 18px; font-size:12px; font-weight:700; color:#555555; text-transform:uppercase; border-bottom:1px solid #EBEBEB; background-color:#F5F5F3;">
                             Email Address
                           </td>
-                          <td style="padding:14px 18px; font-size:14px; font-weight:600; color:#1A1A1A; border-bottom:1px solid #EBEBEB;">
-                            <a href="mailto:${sanitizedEmail}" title="Email ${sanitizedEmail}" style="color:#1A1A1A; text-decoration:none; font-weight:700;">${sanitizedEmail}</a>
+                          <td style="padding:14px 18px; font-size:14px; font-weight:700; color:#1A1A1A; border-bottom:1px solid #EBEBEB;">
+                            <a href="mailto:${safeEmail}" style="color:#1A1A1A; text-decoration:none; font-weight:700;">${safeEmail}</a>
                           </td>
                         </tr>
 
@@ -147,7 +160,7 @@ export async function POST(request) {
                             Phone Number
                           </td>
                           <td style="padding:14px 18px; font-size:14px; font-weight:700; color:#1A1A1A; border-bottom:1px solid #EBEBEB;">
-                            <a href="tel:${sanitizedPhone}" title="Call ${sanitizedPhone}" style="color:#1A1A1A; text-decoration:none;">${sanitizedPhone}</a>
+                            <a href="tel:${safePhone}" style="color:#1A1A1A; text-decoration:none;">${safePhone}</a>
                           </td>
                         </tr>
 
@@ -157,7 +170,7 @@ export async function POST(request) {
                         MESSAGE
                       </div>
                       <div style="background-color:#FAF9F5; border-left:4px solid #FBE87E; border-radius:0 8px 8px 0; border:1px solid #EBEBEB; padding:18px; font-size:14px; line-height:1.6; color:#222222;">
-                        ${sanitizedMessage.replace(/\n/g, "<br>")}
+                        ${safeMessage}
                       </div>
                     </td>
                   </tr>
@@ -247,7 +260,7 @@ export async function POST(request) {
                         For assistance, contact
                       </p>
                       <p style="font-size:18px; font-weight:800; color:#1A1A1A; margin-top:0; margin-bottom:0;">
-                        <a href="mailto:gm@bocheapparels.com" title="Email General Manager" style="color:#1A1A1A; text-decoration:none;">gm@bocheapparels.com</a>
+                        <a href="mailto:gm@bocheapparels.com" style="color:#1A1A1A; text-decoration:none;">gm@bocheapparels.com</a>
                       </p>
 
                     </td>
@@ -260,7 +273,7 @@ export async function POST(request) {
                         boCHE Apparels
                       </p>
                       <p style="font-size:13px; color:#777777; margin-top:0; margin-bottom:0;">
-                        <a href="https://bocheapparels.com" title="boCHE Apparels Website" style="color:#777777; text-decoration:none;">bocheapparels.com</a>
+                        <a href="https://bocheapparels.com" style="color:#777777; text-decoration:none;">bocheapparels.com</a>
                       </p>
                     </td>
                   </tr>

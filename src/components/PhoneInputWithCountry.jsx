@@ -134,7 +134,7 @@ export default function PhoneInputWithCountry({
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
-          className={`flex items-center justify-between gap-1.5 px-3 h-[42px] bg-[#F9F9F9] border rounded-xl text-sm font-bold text-[#1A1A1A] hover:bg-[#F0F0ED] transition-colors shrink-0 cursor-pointer min-w-[96px] ${
+          className={`flex items-center justify-between gap-1.5 px-3 h-12 bg-[#F9F9F9] border rounded-xl text-sm font-bold text-[#1A1A1A] hover:bg-[#F0F0ED] transition-colors shrink-0 cursor-pointer min-w-[96px] ${
             error && touched ? "border-red-500 bg-red-50/20" : "border-[#E5E5E2] focus:border-[#FBE87E]"
           }`}
           aria-expanded={isOpen}
@@ -160,10 +160,10 @@ export default function PhoneInputWithCountry({
             onPaste={handlePaste}
             onBlur={onBlur}
             aria-invalid={!!(error && touched)}
-            className={`w-full h-[42px] bg-[#F9F9F9] border rounded-xl px-3.5 text-sm text-[#1A1A1A] placeholder-[#999999] transition-all focus:outline-none font-body ${
+            className={`w-full h-12 bg-[#F9F9F9] border rounded-xl px-4 text-sm text-[#1A1A1A] placeholder-[#999999] transition-all focus:outline-none font-body ${
               error && touched
                 ? "border-red-500 bg-red-50/20 focus:border-red-500 focus:ring-1 focus:ring-red-500"
-                : "border-[#E5E5E2] focus:border-[#FBE87E]"
+                : "border-[#E5E5E2] focus:border-[#FBE87E] focus:bg-white"
             }`}
           />
         </div>

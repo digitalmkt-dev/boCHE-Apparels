@@ -34,7 +34,7 @@ export default function ContactPageClient() {
     message: "",
   });
 
-  const validateField = (fieldName, value) => {
+  const validateField = (fieldName, value, customCountryIso) => {
     let err = "";
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -47,7 +47,7 @@ export default function ContactPageClient() {
         err = "Please enter a valid email address.";
       }
     } else if (fieldName === "phone") {
-      const phoneErr = validateCountryPhone(value, form.countryIso);
+      const phoneErr = validateCountryPhone(value, customCountryIso || form.countryIso);
       if (phoneErr) {
         err = phoneErr;
       }
@@ -367,11 +367,18 @@ export default function ContactPageClient() {
                     countryIso={form.countryIso}
                     onChange={(val) => {
                       const strVal = typeof val === "string" ? val : (val && val.target ? val.target.value : "");
-                      const safeStr = typeof strVal === "string" ? safeStr : "";
+                      const safeStr = typeof strVal === "string" ? strVal : "";
                       setForm((prev) => ({ ...prev, phone: safeStr }));
                       if (touched.phone) validateField("phone", safeStr);
                     }}
-                    onCountryChange={(iso) => setForm((prev) => ({ ...prev, countryIso: iso }))}
+                    onCountryChange={(iso) => {
+                      setForm((prev) => ({ ...prev, countryIso: iso }));
+                      if (touched.phone) validateField("phone", form.phone, iso);
+                    }}
+                    onBlur={() => {
+                      setTouched((prev) => ({ ...prev, phone: true }));
+                      validateField("phone", form.phone);
+                    }}
                     error={errors.phone}
                     touched={touched.phone}
                   />
